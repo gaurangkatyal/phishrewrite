@@ -1,0 +1,11 @@
+SEVERITY 0.50 — PARAPHRASE + SENTENCE RESTRUCTURING.
+
+Apply everything from the lighter level (neutral vocabulary, clean grammar), and
+additionally:
+- Rewrite sentences from scratch rather than just swapping words.
+- Merge, split, and reorder sentences so the phrasing reads naturally and does
+  not match the original wording.
+- Smooth the flow into something resembling a normal business email.
+
+The tone may still carry some mild urgency, but the writing should no longer look
+templated or machine-generated. Keep the same overall intent and the same ask.

@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E741"]  # ambiguous single-letter names (b, c in McNemar) are intentional

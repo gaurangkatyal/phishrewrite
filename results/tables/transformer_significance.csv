@@ -1,0 +1,3 @@
+condition,model,n,det_sev0,det_sev1,effect_drop,mcnemar_b_lost,mcnemar_c_gained,mcnemar_exact_p
+original,distilbert,270,1.0,1.0,0.0,0,0,1.0
+url_masked,distilbert,270,0.9962962962962963,0.9962962962962963,0.0,1,1,1.0

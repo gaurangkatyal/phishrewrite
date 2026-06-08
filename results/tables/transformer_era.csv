@@ -1,0 +1,11 @@
+era,model,severity,n_phish,detection_rate
+legacy_mbox,distilbert,0.0,128,1.0
+legacy_mbox,distilbert,0.25,128,1.0
+legacy_mbox,distilbert,0.5,128,1.0
+legacy_mbox,distilbert,0.75,128,1.0
+legacy_mbox,distilbert,1.0,128,1.0
+modern_year,distilbert,0.0,142,1.0
+modern_year,distilbert,0.25,142,1.0
+modern_year,distilbert,0.5,142,1.0
+modern_year,distilbert,0.75,142,1.0
+modern_year,distilbert,1.0,142,1.0

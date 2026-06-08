@@ -1,0 +1,10 @@
+SEVERITY 0.25 — LIGHT LEXICAL PARAPHRASE.
+
+Make only surface-level word choices changes:
+- Swap obvious spam/phishing vocabulary for neutral synonyms.
+- Fix spelling, grammar, capitalization, and spacing mistakes.
+- Tone down the most blatant scare words, but keep the overall message, order,
+  and structure essentially the same.
+
+Do NOT restructure sentences, reorder content, or change the tone/urgency level
+beyond fixing the most glaring red-flag words. This is the lightest touch.

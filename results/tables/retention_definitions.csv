@@ -1,0 +1,9 @@
+definition,severity,pass,fail,manual,refused,total,intersection_all_sev
+strict,0.25,362,31,104,3,500,270
+strict,0.5,328,65,104,3,500,270
+strict,0.75,314,80,103,3,500,270
+strict,1.0,303,89,80,28,500,270
+primary,0.25,372,11,114,3,500,331
+primary,0.5,363,20,114,3,500,331
+primary,0.75,359,25,113,3,500,331
+primary,1.0,351,31,90,28,500,331

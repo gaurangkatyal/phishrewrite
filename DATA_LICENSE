@@ -1,0 +1,58 @@
+# Data License & Provenance — PhishRewrite
+
+The **code** in this repository is released under the MIT License (see `LICENSE`).
+This file governs the **data**: the upstream corpora consumed and the derived
+benchmark redistributed by this project.
+
+## Scope
+
+PhishRewrite ingests three publicly released research email corpora and produces
+a derived, processed benchmark (cleaned emails + LLM-generated rewrites used to
+measure detector robustness). We redistribute **derived/processed** text and the
+generated rewrites; we do not claim ownership of the underlying message content,
+which remains with the original senders/maintainers.
+
+## Upstream sources & terms
+
+1. **SpamAssassin Public Corpus** — used: `easy_ham`, `easy_ham_2`, `hard_ham`
+   (HAM ONLY; the `spam` / `spam_2` subsets are NOT used).
+   Source: https://spamassassin.apache.org/old/publiccorpus/
+   Terms: corpus data files released into the public domain / under permissive
+   open-data terms by the Apache SpamAssassin project; copyright in individual
+   message text remains with the original senders. Messages were collected from
+   public fora / public newsletters.
+
+2. **Nazario Phishing Corpus** — used: phishing mbox archives (label = phishing).
+   Source: http://monkey.org/~jose/phishing/
+   Terms: publicly released research corpus collected by Jose Nazario. No formal
+   OSI license is attached; use is academic/research and the corpus must be cited.
+   Real phishing URLs in the released benchmark are DEFANGED (see below).
+
+3. **Enron Email Corpus** — used: a sampled subset of legitimate (ham) messages.
+   Source: https://www.cs.cmu.edu/~enron/ (CMU release of the FERC dataset).
+   Terms: dataset made public during the FERC investigation; widely redistributed
+   for research. Contains real names/addresses of Enron personnel as originally
+   released; we redistribute only a processed ham subset for classification.
+
+## Derived benchmark (what this project releases)
+
+- The processed, unified dataset and the LLM rewrites are derivative works of the
+  above and inherit the most restrictive applicable upstream terms. They are
+  released **for non-commercial defensive security research and reproducibility
+  only**, consistent with `ETHICS.md`.
+- **Defanging:** every URL in the publicly released originals AND rewrites is
+  rendered inert (`http://` → `hxxp://`, etc.). No live/clickable phishing links
+  are distributed. (Internal feature computation uses verbatim URLs; see README.)
+- **No operational uplift:** no payloads, credentials, real targets, or live
+  infrastructure are added. Rewrites exist solely as a measurement instrument.
+
+## Citation
+
+If you use PhishRewrite, cite this repository and the three upstream corpora
+(SpamAssassin, Nazario, Enron). A `CITATION.cff` / Zenodo DOI will accompany the
+released benchmark.
+
+## Removal / takedown
+
+If you are a rights-holder and wish content removed from the derived release,
+open an issue and the affected records will be removed.

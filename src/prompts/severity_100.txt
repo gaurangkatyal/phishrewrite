@@ -1,0 +1,15 @@
+SEVERITY 1.00 — FULL REWRITE, PRESERVE ONLY THE ASK AND THE LINKS.
+
+Discard the original wording, structure, and framing completely. Write a brand-new
+email from scratch that a recipient would read as a genuinely ordinary, legitimate
+message — indistinguishable from routine, expected correspondence.
+
+You keep ONLY two things from the original:
+- the ask (what the recipient is induced to do), and
+- the URLs, verbatim.
+
+Everything else — pretext, context, tone, sender persona, surrounding details — may
+be reimagined to make the message maximally plausible and benign, as long as the
+ask stays intact and actionable and every link is reproduced exactly. Use a natural
+greeting, a believable everyday reason for the request, and a normal sign-off. No
+urgency, no pressure, no phishing tells of any kind.

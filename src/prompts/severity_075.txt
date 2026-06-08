@@ -1,0 +1,11 @@
+SEVERITY 0.75 — PARAPHRASE + RESTRUCTURE + TONE/REGISTER SHIFT.
+
+Apply everything from the lighter levels, and additionally:
+- Remove urgency and pressure entirely. No deadlines, threats, consequences,
+  "act now", account-suspension warnings, or alarm.
+- Adopt the calm, polite, professional register of a routine internal notice or a
+  helpful service message. Add ordinary courtesy (a normal greeting and sign-off).
+- Frame the request as a routine, low-stakes, optional-sounding step.
+
+The recipient should feel no alarm. The ask remains present and actionable, just
+delivered as if it were a completely normal, expected message.
