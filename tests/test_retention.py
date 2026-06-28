@@ -13,9 +13,7 @@ from __future__ import annotations
 from src import attack
 
 
-# --------------------------------------------------------------------------- #
 # Strict (all-URLs) retention
-# --------------------------------------------------------------------------- #
 def test_strict_pass_when_all_urls_survive():
     r = attack.check_retention(
         "Verify at http://evil.com/login or call us.",
@@ -43,9 +41,7 @@ def test_strict_no_urls_is_flagged_for_manual_review():
     assert r["retained_urls"] is None
 
 
-# --------------------------------------------------------------------------- #
 # Primary-URL retention
-# --------------------------------------------------------------------------- #
 def test_primary_keeps_credential_lander_drops_footer():
     """The classic strict-FAIL -> primary-PASS flip: credential URL kept, only an
     incidental social-footer URL dropped."""

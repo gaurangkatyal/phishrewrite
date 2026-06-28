@@ -16,9 +16,7 @@ import pytest
 from src import attack
 
 
-# --------------------------------------------------------------------------- #
 # Fakes that mimic the anthropic Messages response shape
-# --------------------------------------------------------------------------- #
 class _Block:
     def __init__(self, text):
         self.type = "text"
@@ -77,9 +75,7 @@ class _Transient(Exception):
         self.status_code = 429
 
 
-# --------------------------------------------------------------------------- #
 # Tests
-# --------------------------------------------------------------------------- #
 def test_rewrite_parses_text_and_usage():
     msgs = _FakeMessages("Subject: Hi\n\nBody here http://x.test/login")
     rw = _rewriter_with(msgs)
@@ -133,3 +129,88 @@ def test_make_record_is_well_formed():
     assert rec["retained_urls"] is True
     assert rec["n_orig_urls"] == 1
     assert rec["refused"] is False
+
+
+# The shared rewrite driver (attack.run_rewrite_loop), exercised against the fakes
+# above so the cache/skip/error paths are covered without network or an API key.
+_SAMPLE = pd.DataFrame(
+    [
+        {"id": "e1", "original_id": "o1", "source": "nazario", "text": "Go to http://a.test/login"},
+        {"id": "e2", "original_id": "o2", "source": "nazario", "text": "Verify at http://b.test/v"},
+    ]
+)
+_SEVS = {0.5: "instr-0.5", 1.0: "instr-1.0"}
+
+
+def test_run_loop_calls_model_and_appends_new():
+    msgs = _FakeMessages("Subject: Hi\n\nGo to http://a.test/login")
+    rw = _rewriter_with(msgs)
+    appended, cache = [], {}
+    recs = attack.run_rewrite_loop(
+        _SAMPLE,
+        _SEVS,
+        rewriter=rw,
+        system="SYSTEM",
+        cache=cache,
+        append_fn=appended.append,
+        header="=== test ===",
+        label="test",
+    )
+    n = len(_SAMPLE) * len(_SEVS)
+    assert msgs.calls == n  # every (email, severity) hit the model
+    assert len(appended) == n  # ...and every new record was persisted
+    assert len(recs) == n
+    assert len(cache) == n  # cache populated keyed by (id, severity)
+
+
+def test_run_loop_reuses_cache_without_calling_model():
+    msgs = _FakeMessages("unused")
+    rw = _rewriter_with(msgs)
+    # Pre-seed the cache with a valid hit for every (email, severity): matching
+    # prompt_hash AND input_text_sha means the loop must reuse, never call.
+    cache = {}
+    for _, row in _SAMPLE.iterrows():
+        for sev, instr in _SEVS.items():
+            key = attack._cache_key(row["original_id"], sev)
+            cache[key] = {
+                "original_id": row["original_id"],
+                "prompt_hash": attack.prompt_hash(
+                    "SYSTEM", instr, row["text"], rw.model, rw.temperature
+                ),
+                "input_text_sha": attack.text_sha(row["text"]),
+            }
+    appended = []
+    recs = attack.run_rewrite_loop(
+        _SAMPLE,
+        _SEVS,
+        rewriter=rw,
+        system="SYSTEM",
+        cache=cache,
+        append_fn=appended.append,
+        header="=== test ===",
+        label="test",
+    )
+    assert msgs.calls == 0  # everything served from cache
+    assert appended == []  # nothing new written
+    assert len(recs) == len(_SAMPLE) * len(_SEVS)
+
+
+def test_run_loop_skips_per_call_errors(monkeypatch):
+    monkeypatch.setattr(attack.time, "sleep", lambda *_: None)
+    # A non-transient, non-account error is logged and skipped, not raised.
+    msgs = _FakeMessages("never", fail_times=99, error=ValueError("bad request"))
+    rw = _rewriter_with(msgs)
+    appended, cache = [], {}
+    recs = attack.run_rewrite_loop(
+        _SAMPLE,
+        _SEVS,
+        rewriter=rw,
+        system="SYSTEM",
+        cache=cache,
+        append_fn=appended.append,
+        header="=== test ===",
+        label="test",
+    )
+    assert recs == []  # all failed -> none recorded
+    assert appended == []
+    assert cache == {}

@@ -31,9 +31,7 @@ from . import config
 
 _UA = "PhishRewrite/0.1 (defensive research; +https://github.com/)"
 
-# --------------------------------------------------------------------------- #
 # Candidate URLs
-# --------------------------------------------------------------------------- #
 # monkey.org (Nazario) hosting is historically flaky and has moved over the
 # years; SpamAssassin Apache mirror paths also drift. We therefore probe every
 # canonical URL at the gate and REPORT failures instead of silently substituting
@@ -89,9 +87,7 @@ def candidate_targets() -> list[UrlTarget]:
     return targets
 
 
-# --------------------------------------------------------------------------- #
 # URL verification (HEAD, with ranged-GET fallback)
-# --------------------------------------------------------------------------- #
 @dataclass
 class ProbeResult:
     url: str
@@ -205,9 +201,7 @@ def verify_urls(timeout: int = 20) -> list[ProbeResult]:
     return results
 
 
-# --------------------------------------------------------------------------- #
 # Download (GATED)
-# --------------------------------------------------------------------------- #
 def download(timeout: int = 60) -> None:
     """Fetch verified corpora into data/raw. Refuses to run if verification fails."""
     config.ensure_dirs()
@@ -237,9 +231,7 @@ def download(timeout: int = 60) -> None:
     print("Download complete.")
 
 
-# --------------------------------------------------------------------------- #
 # Parse + clean (run after download)
-# --------------------------------------------------------------------------- #
 # Link-bearing attributes whose destinations are the actual phishing payload.
 # get_text() discards attributes, so we inline these targets into the text before
 # extraction; otherwise ~half of HTML phishing emails lose every URL (the href
@@ -521,9 +513,7 @@ def _report_class_balance(df) -> None:
         )
 
 
-# --------------------------------------------------------------------------- #
 # CLI
-# --------------------------------------------------------------------------- #
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="PhishRewrite data preparation")
     parser.add_argument(

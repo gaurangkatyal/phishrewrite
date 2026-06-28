@@ -27,9 +27,7 @@ from sklearn.preprocessing import StandardScaler
 
 from . import config
 
-# --------------------------------------------------------------------------- #
 # Cache paths
-# --------------------------------------------------------------------------- #
 X_TRAIN_NPZ = config.PROCESSED_DIR / "X_train.npz"
 X_TEST_NPZ = config.PROCESSED_DIR / "X_test.npz"
 Y_TRAIN_NPY = config.PROCESSED_DIR / "y_train.npy"
@@ -37,9 +35,7 @@ Y_TEST_NPY = config.PROCESSED_DIR / "y_test.npy"
 SCALER_PATH = config.MODELS_DIR / "handcrafted_scaler.joblib"
 FEATURE_NAMES_JSON = config.MODELS_DIR / "feature_names.json"
 
-# --------------------------------------------------------------------------- #
 # Handcrafted features
-# --------------------------------------------------------------------------- #
 URL_RE = re.compile(r"https?://\S+|www\.\S+", re.IGNORECASE)
 
 HANDCRAFTED_NAMES: tuple[str, ...] = (
@@ -79,9 +75,7 @@ def handcrafted_matrix(df: pd.DataFrame) -> np.ndarray:
     return out
 
 
-# --------------------------------------------------------------------------- #
 # Build / load
-# --------------------------------------------------------------------------- #
 def load_dataset() -> pd.DataFrame:
     df = pd.read_csv(config.DATASET_CSV)
     df["text"] = df["text"].fillna("")

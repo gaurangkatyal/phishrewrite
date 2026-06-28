@@ -25,7 +25,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-import time
 
 import joblib
 import numpy as np
@@ -54,9 +53,7 @@ def _adv_model_path(name: str, masked: bool):
     return config.MODELS_DIR / f"{name}_adv{'_urlmasked' if masked else ''}.joblib"
 
 
-# --------------------------------------------------------------------------- #
 # Seeded train-phishing sample (disjoint from test by construction)
-# --------------------------------------------------------------------------- #
 def sample_phish_train(limit: int | None = None) -> pd.DataFrame:
     df = pd.read_csv(config.DATASET_CSV)
     pool = df[(df["split"] == "train") & (df["label"] == config.LABEL_PHISHING)]
@@ -75,9 +72,7 @@ def _severity_prompts() -> dict[float, str]:
     return out
 
 
-# --------------------------------------------------------------------------- #
 # Cost estimate (no API calls)
-# --------------------------------------------------------------------------- #
 def estimate() -> None:
     system = attack.load_system_prompt()
     sevs = _severity_prompts()
@@ -128,9 +123,7 @@ def estimate() -> None:
     print("  (heuristic char/4 token counts; actual usage recorded per call.)")
 
 
-# --------------------------------------------------------------------------- #
 # Rewriting (reuses attack machinery; separate cache file)
-# --------------------------------------------------------------------------- #
 def _load_train_cache() -> dict[str, dict]:
     cache: dict[str, dict] = {}
     if not REWRITES_TRAIN_JSONL.exists():
@@ -158,66 +151,24 @@ def rewrite_train(sample: pd.DataFrame) -> list[dict]:
         config.ATTACK_TEMPERATURE,
         config.ATTACK_MAX_TOKENS,
     )
-    cache = _load_train_cache()
-    records: list[dict] = []
-    todo = [(row, sev) for _, row in sample.iterrows() for sev in sevs]
-    n_total = len(todo)
-    n_done = n_skip = n_err = 0
-    print(
+    header = (
         f"=== MITIGATION rewrite: {len(sample)} train emails x {len(sevs)} "
-        f"severities = {n_total} calls ==="
+        f"severities = {len(sample) * len(sevs)} calls ==="
     )
-    t0 = time.time()
-    for row, sev in todo:
-        key = attack._cache_key(row["original_id"], sev)
-        ph = attack.prompt_hash(
-            system, sevs[sev], row["text"], rewriter.model, rewriter.temperature
-        )
-        th = attack.text_sha(row["text"])
-        cached = cache.get(key)
-        if cached and cached.get("prompt_hash") == ph and cached.get("input_text_sha", th) == th:
-            n_skip += 1
-            records.append(cached)
-            continue
-        try:
-            raw, usage = rewriter.rewrite(sevs[sev], row["text"])
-        except Exception as e:  # noqa: BLE001
-            fatal = attack.fatal_account_message(e)
-            if fatal:
-                raise SystemExit(
-                    f"\nAborting mitigation rewrite: account-level error from "
-                    f"{rewriter.provider!r} that no retry/resume can fix:\n"
-                    f"  {fatal}\n"
-                    f"  Progress is cached ({n_done} new this run); fix the "
-                    f"account and re-run to resume from the cache."
-                )
-            n_err += 1
-            msg = f"{type(e).__name__}: {str(e).replace(chr(10), ' ')[:200]}"
-            print(
-                f"  [{n_done + n_skip + n_err}/{n_total}] id="
-                f"{row['original_id']} sev={sev:.2f} ERROR (skipped): {msg}"
-            )
-            continue
-        rec = attack.make_record(row, sev, sevs[sev], system, rewriter, raw, usage)
-        _append_train(rec)
-        cache[key] = rec
-        records.append(rec)
-        n_done += 1
-        print(
-            f"  [{n_done + n_skip + n_err}/{n_total}] id={row['original_id']} "
-            f"sev={sev:.2f} retention={attack._retention_label(rec)}"
-        )
-    print(
-        f"\n  done: {n_done} new, {n_skip} cached, {n_err} errored/skipped, "
-        f"in {time.time() - t0:.1f}s"
+    return attack.run_rewrite_loop(
+        sample,
+        sevs,
+        rewriter=rewriter,
+        system=system,
+        cache=_load_train_cache(),
+        append_fn=_append_train,
+        header=header,
+        label="mitigation rewrite",
+        retention_summary=True,
     )
-    attack._retention_summary(records)
-    return records
 
 
-# --------------------------------------------------------------------------- #
 # Augment + retrain
-# --------------------------------------------------------------------------- #
 def _passing(records: list[dict]) -> list[dict]:
     return [r for r in records if (r.get("retained_urls") is True) and not r.get("refused")]
 
@@ -275,9 +226,7 @@ def augment_and_retrain(records: list[dict]) -> int:
     return len(aug)
 
 
-# --------------------------------------------------------------------------- #
 # Rescore baseline vs adversarial on the existing TEST rewrites
-# --------------------------------------------------------------------------- #
 def _adv_transform(texts, had_html):
     vec, scaler = joblib.load(ADV_VEC), joblib.load(ADV_SCALER)
     frame = pd.DataFrame({"text": list(texts), "had_html": list(had_html)})
@@ -373,9 +322,7 @@ def _print_mitigation(out: pd.DataFrame) -> None:
                 print(f"               {s:>4.2f}  {bv:>9.3f} {av:>7.3f}  {av - bv:>+7.3f}")
 
 
-# --------------------------------------------------------------------------- #
 # CLI
-# --------------------------------------------------------------------------- #
 def run_full() -> None:
     # Pre-flight: fail fast if the provider's API key is missing/empty, before
     # sampling or any rewrite call — so a blank key never aborts mid-spend.

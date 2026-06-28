@@ -29,7 +29,6 @@ import argparse
 import json
 import re
 import sys
-import time
 
 import joblib
 import numpy as np
@@ -64,9 +63,7 @@ def _advgem_model_path(name: str, masked: bool):
     return config.MODELS_DIR / f"{name}_advgem{'_urlmasked' if masked else ''}.joblib"
 
 
-# --------------------------------------------------------------------------- #
 # Rewrite (Gemini), separate cache (API)
-# --------------------------------------------------------------------------- #
 def _load_cache() -> dict:
     path, cache = _gem_cache_path(), {}
     if path.exists():
@@ -102,54 +99,24 @@ def rewrite_train_gem(sample: pd.DataFrame | None = None) -> list[dict]:
         config.ATTACK_TEMPERATURE,
         config.ATTACK_MAX_TOKENS,
     )
-    cache = _load_cache()
-    todo = [(row, sev) for _, row in sample.iterrows() for sev in sevs]
-    records, n_done, n_skip, n_err = [], 0, 0, 0
-    print(f"=== Gemini TRAIN rewrite: {len(sample)} x {len(sevs)} = {len(todo)} calls ===")
-    t0 = time.time()
-    for row, sev in todo:
-        key = attack._cache_key(row["original_id"], sev)
-        ph = attack.prompt_hash(
-            system, sevs[sev], row["text"], rewriter.model, rewriter.temperature
-        )
-        th = attack.text_sha(row["text"])
-        cached = cache.get(key)
-        if cached and cached.get("prompt_hash") == ph and cached.get("input_text_sha", th) == th:
-            n_skip += 1
-            records.append(cached)
-            continue
-        try:
-            raw, usage = rewriter.rewrite(sevs[sev], row["text"])
-        except Exception as e:  # noqa: BLE001
-            fatal = attack.fatal_account_message(e)
-            if fatal:
-                raise SystemExit(
-                    f"\nAborting Gemini train rewrite (account-level): {fatal}\n"
-                    f"  Progress cached ({n_done} new); fix and re-run."
-                )
-            n_err += 1
-            print(
-                f"  [{n_done+n_skip+n_err}/{len(todo)}] id={row['original_id']} "
-                f"sev={sev:.2f} ERROR: {type(e).__name__}"
-            )
-            continue
-        rec = attack.make_record(row, sev, sevs[sev], system, rewriter, raw, usage)
-        _append(rec)
-        cache[key] = rec
-        records.append(rec)
-        n_done += 1
-        print(
-            f"  [{n_done+n_skip+n_err}/{len(todo)}] id={row['original_id']} "
-            f"sev={sev:.2f} retention={attack._retention_label(rec)}"
-        )
-    print(f"\n  done: {n_done} new, {n_skip} cached, {n_err} errored, in {time.time()-t0:.1f}s")
-    attack._retention_summary(records)
-    return records
+    header = (
+        f"=== Gemini TRAIN rewrite: {len(sample)} x {len(sevs)} "
+        f"= {len(sample) * len(sevs)} calls ==="
+    )
+    return attack.run_rewrite_loop(
+        sample,
+        sevs,
+        rewriter=rewriter,
+        system=system,
+        cache=_load_cache(),
+        append_fn=_append,
+        header=header,
+        label="Gemini train rewrite",
+        retention_summary=True,
+    )
 
 
-# --------------------------------------------------------------------------- #
 # Augment + retrain into *_advgem paths (no API)
-# --------------------------------------------------------------------------- #
 def _build_and_fit(text: pd.Series, had_html: pd.Series, y: np.ndarray, masked: bool) -> None:
     src_text = text.map(ablation.mask_urls) if masked else text
     vec = TfidfVectorizer(
@@ -193,9 +160,7 @@ def augment_and_retrain(records: list[dict]) -> int:
     return len(aug)
 
 
-# --------------------------------------------------------------------------- #
 # Rescore vs Haiku test rewrites, with McNemar (no API)
-# --------------------------------------------------------------------------- #
 def _advgem_transform(masked: bool):
     vp, sp = _advgem_vec(masked)
     vec, scaler = joblib.load(vp), joblib.load(sp)
@@ -322,7 +287,6 @@ def _print(out: pd.DataFrame) -> None:
             )
 
 
-# --------------------------------------------------------------------------- #
 def run_full() -> None:
     config.require_api_key(config.ATTACK_PROVIDER)
     records = rewrite_train_gem()

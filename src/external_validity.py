@@ -38,7 +38,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import time
 
 import joblib
 import numpy as np
@@ -79,9 +78,7 @@ def _vec_paths(masked: bool):
     return (CEAS_DIR / f"tfidf{suffix}.joblib", CEAS_DIR / f"scaler{suffix}.joblib")
 
 
-# --------------------------------------------------------------------------- #
 # Dataset build (same-era 2008, stratified split)
-# --------------------------------------------------------------------------- #
 def build_dataset(force: bool = False) -> pd.DataFrame:
     if DATASET_CSV.exists() and not force:
         return pd.read_csv(DATASET_CSV).assign(
@@ -128,9 +125,7 @@ def build_dataset(force: bool = False) -> pd.DataFrame:
     return df
 
 
-# --------------------------------------------------------------------------- #
 # Feature build + detector training (original + URL-blind), no API
-# --------------------------------------------------------------------------- #
 def _combine(tfidf, hc) -> sparse.csr_matrix:
     return sparse.hstack([tfidf, sparse.csr_matrix(hc)]).tocsr()
 
@@ -186,9 +181,7 @@ def _transform(texts, had_html, masked: bool) -> sparse.csr_matrix:
     return _combine(tfidf, hc)
 
 
-# --------------------------------------------------------------------------- #
 # Rewrite the positive class (Haiku), retention contract (API)
-# --------------------------------------------------------------------------- #
 def sample_positive(n: int = N_REWRITE_SAMPLE) -> pd.DataFrame:
     df = build_dataset()
     pool = df[(df["split"] == "train") & (df["label"] == config.LABEL_PHISHING)]
@@ -259,54 +252,24 @@ def rewrite(sample: pd.DataFrame | None = None) -> list[dict]:
         config.ATTACK_TEMPERATURE,
         config.ATTACK_MAX_TOKENS,
     )
-    cache = _load_cache()
-    todo = [(row, sev) for _, row in sample.iterrows() for sev in sevs]
-    records, n_done, n_skip, n_err = [], 0, 0, 0
-    print(f"=== CEAS rewrite: {len(sample)} spam x {len(sevs)} sev = {len(todo)} calls ===")
-    t0 = time.time()
-    for row, sev in todo:
-        key = attack._cache_key(row["original_id"], sev)
-        ph = attack.prompt_hash(
-            system, sevs[sev], row["text"], rewriter.model, rewriter.temperature
-        )
-        th = attack.text_sha(row["text"])
-        cached = cache.get(key)
-        if cached and cached.get("prompt_hash") == ph and cached.get("input_text_sha", th) == th:
-            n_skip += 1
-            records.append(cached)
-            continue
-        try:
-            raw, usage = rewriter.rewrite(sevs[sev], row["text"])
-        except Exception as e:  # noqa: BLE001
-            fatal = attack.fatal_account_message(e)
-            if fatal:
-                raise SystemExit(
-                    f"\nAborting CEAS rewrite (account-level): {fatal}\n"
-                    f"  Progress cached ({n_done} new); fix and re-run."
-                )
-            n_err += 1
-            print(
-                f"  [{n_done+n_skip+n_err}/{len(todo)}] id={row['original_id']} "
-                f"sev={sev:.2f} ERROR: {type(e).__name__}"
-            )
-            continue
-        rec = attack.make_record(row, sev, sevs[sev], system, rewriter, raw, usage)
-        _append(rec)
-        cache[key] = rec
-        records.append(rec)
-        n_done += 1
-        print(
-            f"  [{n_done+n_skip+n_err}/{len(todo)}] id={row['original_id']} "
-            f"sev={sev:.2f} retention={attack._retention_label(rec)}"
-        )
-    print(f"\n  done: {n_done} new, {n_skip} cached, {n_err} errored, in {time.time()-t0:.1f}s")
-    attack._retention_summary(records)
-    return records
+    header = (
+        f"=== CEAS rewrite: {len(sample)} spam x {len(sevs)} sev "
+        f"= {len(sample) * len(sevs)} calls ==="
+    )
+    return attack.run_rewrite_loop(
+        sample,
+        sevs,
+        rewriter=rewriter,
+        system=system,
+        cache=_load_cache(),
+        append_fn=_append,
+        header=header,
+        label="CEAS rewrite",
+        retention_summary=True,
+    )
 
 
-# --------------------------------------------------------------------------- #
 # Scoring: degradation + url-masked, fixed-FPR, bootstrap CIs, McNemar
-# --------------------------------------------------------------------------- #
 def _is_valid(rec: dict) -> bool:
     return (rec.get("retained_urls") is True) and not rec.get("refused")
 
@@ -473,7 +436,6 @@ def _print_summary(out: pd.DataFrame, mcn: pd.DataFrame) -> None:
             print(f"        drop 0->1.0  recall@0.5 {d05:+.3f}  det@FPR {dfp:+.3f}")
 
 
-# --------------------------------------------------------------------------- #
 def main(argv=None):
     p = argparse.ArgumentParser(description="CEAS-2008 external-validity replication")
     p.add_argument("--build", action="store_true")

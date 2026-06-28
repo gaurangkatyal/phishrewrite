@@ -52,18 +52,14 @@ def _masked_model_path(name: str):
     return config.MODELS_DIR / f"{name}_urlmasked.joblib"
 
 
-# --------------------------------------------------------------------------- #
 # URL masking
-# --------------------------------------------------------------------------- #
 def mask_urls(text: str) -> str:
     """Remove every URL (same regex the handcrafted features use). Replaced with a
     space so token boundaries are preserved but no scheme/domain/path survives."""
     return features.URL_RE.sub(" ", text or "")
 
 
-# --------------------------------------------------------------------------- #
 # URL-blind detector training (cached)
-# --------------------------------------------------------------------------- #
 def _combine(tfidf: sparse.spmatrix, hc_scaled: np.ndarray) -> sparse.csr_matrix:
     return sparse.hstack([tfidf, sparse.csr_matrix(hc_scaled)]).tocsr()
 
@@ -113,9 +109,7 @@ def masked_transform(texts: list[str], had_html) -> sparse.csr_matrix:
     return _combine(tfidf, hc)
 
 
-# --------------------------------------------------------------------------- #
 # Generic scorer reused by both the ablation and the mitigation rescoring
-# --------------------------------------------------------------------------- #
 def _phish_texts(oids, by_id, severity, orig_text):
     texts, html = [], []
     for oid in oids:
@@ -179,9 +173,7 @@ def score_condition(
     return pd.DataFrame(rows)
 
 
-# --------------------------------------------------------------------------- #
 # Orchestrator
-# --------------------------------------------------------------------------- #
 def run_ablation() -> None:
     config.ensure_dirs()
     features.ensure_features()
