@@ -28,9 +28,7 @@ log(){ echo "[$(date '+%F %T')] $*" >>"$SLOG"; }
 
 log "=== supervisor start (pid $$) root=$ROOT ==="
 
-# --------------------------------------------------------------------------- #
 # 1. caffeinate: anti-sleep + watchdog
-# --------------------------------------------------------------------------- #
 ensure_caffeinate(){
   if ! pgrep -x caffeinate >/dev/null 2>&1; then
     nohup caffeinate -dimsu -t 86400 >/dev/null 2>&1 & disown
@@ -41,9 +39,7 @@ ensure_caffeinate
 ( while true; do sleep 300; ensure_caffeinate; done ) & disown
 log "caffeinate watchdog started (pid $!) — checks every 5 min"
 
-# --------------------------------------------------------------------------- #
 # sentinel helpers
-# --------------------------------------------------------------------------- #
 mark_done(){  # task, message
   local t="$1"; shift
   rm -f "$SENT/$t.failed"
@@ -57,10 +53,8 @@ mark_failed(){  # task, reason, resume-cmd
   log "$t -> FAILED: $reason"
 }
 
-# --------------------------------------------------------------------------- #
 # 2. External validity, significance, reverse mitigation — settle from cache
 #    (no re-spend if outputs already exist)
-# --------------------------------------------------------------------------- #
 # Paired significance — already complete in this repo.
 if [ -f "$ROOT/results/tables/significance_paired.csv" ]; then
   mark_done taskC "significance_paired.csv present (paired McNemar exact)"
@@ -101,9 +95,7 @@ else
   fi
 fi
 
-# --------------------------------------------------------------------------- #
 # 4. Launch finalizer (it waits on all sentinels, 12h cap, then writes STATUS.md)
-# --------------------------------------------------------------------------- #
 if ! pgrep -f "scripts/finalizer.py" >/dev/null 2>&1; then
   nohup "$PY" "$ROOT/scripts/finalizer.py" >>"$LOGD/finalizer.log" 2>&1 & disown
   log "finalizer launched (pid $!)"
@@ -111,9 +103,7 @@ else
   log "finalizer already running — not relaunching"
 fi
 
-# --------------------------------------------------------------------------- #
 # 3. Transformer run — adopt the running job; auto-resume from checkpoint on OOM
-# --------------------------------------------------------------------------- #
 A_DEG="$ROOT/results/tables/transformer_degradation.csv"
 A_ERA="$ROOT/results/tables/transformer_era.csv"
 MAXR=6; retries=0

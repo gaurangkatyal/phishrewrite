@@ -180,7 +180,7 @@ def score() -> None:
     config.ensure_dirs()
     df = ev.build_dataset()
 
-    # ---- assemble rewrite caches (Haiku always; Gemini only if present) ----
+    # assemble rewrite caches (Haiku always; Gemini only if present)
     haiku = _by_id(list(ev._load_cache().values()))
     if not haiku:
         raise SystemExit(
