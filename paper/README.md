@@ -27,12 +27,15 @@ Produces `main.pdf`. Needs a standard TeX distribution (TeX Live / MacTeX) with
 
 ## Before submitting (arXiv / venue)
 
-- [ ] Verify dataset citations in `references.bib` — the `nazario`, `spamassassin`,
-      and `champa2024ceas` entries carry repo provenance; confirm exact authors/years
-      against the upstream sources.
-- [ ] Decide on the general citation DOI (concept vs. version) for `phishrewrite2026`.
+- [x] Verify dataset citations in `references.bib` — CEAS verified against the Zenodo
+      record (Champa, *Phishing Email Curated Datasets*, 2023); `nazario` cited by
+      author + URL (no canonical year); `spamassassin` by project + URL.
+- [x] Decide on the general citation DOI — uses the concept DOI
+      (`10.5281/zenodo.21018699`, all versions); v1.0 noted alongside.
+- [x] Add author affiliation / ORCID — Independent Researcher,
+      ORCID 0009-0001-0850-1673.
 - [ ] Pick a venue style if not arXiv-only (the draft uses plain `article`).
-- [ ] Add an author affiliation / ORCID and acknowledgements.
+- [ ] Add acknowledgements (optional).
 - [ ] Re-read the transformer §: the corpus-dependence framing (Nazario resists,
       CEAS-2008 degrades) is the load-bearing nuance — keep it honest.
 

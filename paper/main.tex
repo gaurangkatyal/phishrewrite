@@ -17,7 +17,11 @@
 
 \title{PhishRewrite: Measuring the Fragility of Content-Based\\
 Phishing Detectors under LLM Rewriting}
-\author{Gaurang Katyal}
+\author{%
+  Gaurang Katyal\\
+  \normalsize Independent Researcher\\
+  \normalsize ORCID: \href{https://orcid.org/0009-0001-0850-1673}{0009-0001-0850-1673}%
+}
 \date{2026}
 
 \begin{document}
@@ -298,7 +302,7 @@ detectors broke.
 
 \subsection{External validity: CEAS-2008}\label{sec:external}
 To remove the era confound between recent phishing and older ham, we replicate on
-CEAS-2008 \citep{champa2024ceas}, where both classes are from 2008.
+CEAS-2008 \citep{champa2023phishing}, where both classes are from 2008.
 (CEAS labels are generic spam, not phishing specifically; this is a deliberate
 generality check, surfaced as a caveat.) Both the degradation curve and the
 URL-masking amplification reproduce: every original-condition drop is
@@ -369,7 +373,8 @@ detector hardening.
 
 \paragraph{Availability.} Benchmark and code:
 \url{https://github.com/gaurangkatyal/phishrewrite}; archived data at
-\url{https://doi.org/10.5281/zenodo.21018700}.
+\url{https://doi.org/10.5281/zenodo.21018699} (v1.0:
+\url{https://doi.org/10.5281/zenodo.21018700}).
 
 \bibliographystyle{plainnat}
 \bibliography{references}

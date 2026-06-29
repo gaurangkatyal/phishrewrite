@@ -1,6 +1,7 @@
-% NOTE: dataset entries (nazario, spamassassin, champa2024ceas) carry the
-% provenance recorded in the repo's PROVENANCE.md / DATA_LICENSE. Verify exact
-% author lists / years against the upstream sources before camera-ready.
+% NOTE: dataset entries (nazario, spamassassin) carry the provenance recorded in
+% the repo's PROVENANCE.md / DATA_LICENSE. The CEAS entry was verified against the
+% Zenodo record (10.5281/zenodo.8339691). The Nazario corpus has no canonical
+% publication year; cited by author + URL.
 
 @inproceedings{sahami1998bayesian,
   author    = {Sahami, Mehran and Dumais, Susan and Heckerman, David and Horvitz, Eric},
@@ -59,8 +60,8 @@
 
 @misc{nazario,
   author       = {Nazario, Jose},
-  title        = {The {Nazario} Phishing Corpus},
-  howpublished = {Public phishing email corpus},
+  title        = {The Online Phishing Corpus},
+  howpublished = {\url{https://monkey.org/~jose/phishing/}},
   note         = {Collected phishing emails used for anti-phishing research}
 }
 
@@ -71,13 +72,13 @@
   note         = {Ham subsets only (easy\_ham, easy\_ham\_2, hard\_ham)}
 }
 
-@misc{champa2024ceas,
-  author       = {Champa, A. and others},
-  title        = {{CEAS-2008} Spam/Phishing Email Dataset},
-  year         = {2024},
-  howpublished = {Zenodo},
+@misc{champa2023phishing,
+  author       = {Champa, Arifa Islam},
+  title        = {Phishing Email Curated Datasets},
+  year         = {2023},
+  publisher    = {Zenodo},
   doi          = {10.5281/zenodo.8339691},
-  note         = {Same-era (2008) spam-vs-ham corpus; CC-BY 4.0}
+  note         = {CEAS-2008 subset used (same-era 2008 spam-vs-ham); CC-BY 4.0}
 }
 
 @misc{phishrewrite2026,
@@ -85,7 +86,7 @@
   title        = {{PhishRewrite}: a benchmark for LLM-driven evasion of phishing detectors},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {1.0},
-  doi          = {10.5281/zenodo.21018700},
-  url          = {https://doi.org/10.5281/zenodo.21018700}
+  doi          = {10.5281/zenodo.21018699},
+  url          = {https://doi.org/10.5281/zenodo.21018699},
+  note         = {Concept DOI (all versions); v1.0 is 10.5281/zenodo.21018700}
 }
