@@ -105,6 +105,11 @@ PhishRewrite differs from generic adversarial-text work in two ways: the
 perturbation is a \emph{semantically faithful rewrite} produced by an LLM under an
 explicit intent-preservation constraint, and we measure detector degradation on a
 realistic, label-validity-checked corpus rather than on synthetic token edits.
+This study is the email-detection counterpart of a parallel finding in social bot
+detection, where account-history (behavioural) features were shown to resist
+LLM-driven manipulation that defeats content-based classifiers
+\citep{katyal2026bots}: there the robust signal is behavioural; here it is the URL,
+and removing it (\S\ref{sec:results}) deepens the collapse.
 
 \section{Threat Model and Attack}\label{sec:method}
 \paragraph{Threat model.} The attacker possesses a phishing email and black-box
