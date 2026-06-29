@@ -10,9 +10,11 @@
 \usepackage{siunitx}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xurl}   % allow long URLs to break across lines
 \usepackage{natbib}
 
-\sisetup{detect-weight=true, detect-family=true}
+\sisetup{reset-text-series=false, text-series-to-math=true,
+         reset-text-family=false, text-family-to-math=true}
 \newcommand{\dropneg}[1]{\textcolor{red}{$-#1$}}
 
 \title{PhishRewrite: Measuring the Fragility of Content-Based\\
@@ -198,7 +200,7 @@ All three detectors are strong on clean test data (logreg ROC-AUC 0.999, PR-AUC
 0.997, recall 0.985; random forest and gradient boosting comparable), so the attack
 operates on an honest, well-calibrated baseline.
 
-\subsection{Headline degradation (URLs intact, $n=270$)}
+\subsection{Headline degradation (URLs intact, \texorpdfstring{$n=270$}{n=270})}
 Table~\ref{tab:headline} reports detection versus severity on the strict
 intersection set with URLs intact. The linear detector is the most fragile
 (recall \dropneg{0.122}, det@1\%FPR \dropneg{0.107}); the tree ensembles lean on
