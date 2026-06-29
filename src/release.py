@@ -52,13 +52,21 @@ def _refang_token(u: str) -> str:
 
 
 def defang(text: str) -> str:
-    """Defang every URL in `text`. Reversible via refang()."""
-    return features.URL_RE.sub(lambda m: _defang_token(m.group(0)), text or "")
+    """Defang every URL in `text`. Reversible via refang().
+
+    The URL_RE token pass handles the leading scheme and a bare `www.` host. The
+    trailing scheme sweep also neutralises schemes nested in redirector query
+    strings (e.g. google `/url?q=http://...`) that the per-token, leading-anchored
+    rewrite would otherwise miss — so no live `http(s)://` ever survives.
+    """
+    text = features.URL_RE.sub(lambda m: _defang_token(m.group(0)), text or "")
+    return text.replace("https://", "hxxps://").replace("http://", "hxxp://")
 
 
 def refang(text: str) -> str:
     """Inverse of defang(): restore verbatim, clickable URLs."""
-    return DEFANGED_URL_RE.sub(lambda m: _refang_token(m.group(0)), text or "")
+    text = DEFANGED_URL_RE.sub(lambda m: _refang_token(m.group(0)), text or "")
+    return text.replace("hxxps://", "https://").replace("hxxp://", "http://")
 
 
 # Build
@@ -281,7 +289,8 @@ def _refang_token(u: str) -> str:
 
 
 def refang(text: str) -> str:
-    return DEFANGED_URL_RE.sub(lambda m: _refang_token(m.group(0)), str(text or ""))
+    text = DEFANGED_URL_RE.sub(lambda m: _refang_token(m.group(0)), str(text or ""))
+    return text.replace("hxxps://", "https://").replace("hxxp://", "http://")
 
 
 if __name__ == "__main__":
