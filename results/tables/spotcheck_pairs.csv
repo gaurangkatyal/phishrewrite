@@ -1,0 +1,635 @@
+verdict,original_id,severity,n_orig_urls,missing_urls,refused,original_text,rewrite_text
+PASS,naz:phishing-2016:212,0.25,1,,False,"1 NEW UPDATE: [jose@monkey.org! Has been blacklisted]
+Hello jose@monkey.org , This is to notify you that your e-mail address (jose@monkey.org) has been blacklisted. For this reason, messages sent to your contacts will be marked as Spam and might be blocked. To remove your email (jose@monkey.org) from blacklist, please click the link below To learn more about the blacklist electrnic e-mail security alert system, please click on this link hxxps://help.tune.com/hasoffers/blacklists-spam/ © Copyright 2016","1 New Update: [jose@monkey.org has been flagged]
+Hello jose@monkey.org, This is to notify you that your email address (jose@monkey.org) has been flagged. For this reason, messages sent to your contacts may be marked as spam and could be blocked. To remove your email (jose@monkey.org) from the flagged list, please click the link below. To learn more about the flagged email security alert system, please click on this link hxxps://help.tune.com/hasoffers/blacklists-spam/ © Copyright 2016"
+PASS,naz:phishing3.mbox:274,0.25,2,,False,"-Notice- Update Your Information
+New Page 1 Important Notice: Jan, 2006 Dear Sir/Madam, Barclays Bank PLC. always look forward for the high security of our clients. Some customers have been receiving an email claiming to be from Barclays advising them to follow a link to what appear to be a Barclays web site, where they are prompted to enter their personal Online Banking details. Barclays is in no way involved with this email and the web site does not belong to us. Barclays is proud to announce about their new updated secure system. We updated our new SSL servers to give our customers a better, fast and secure online banking service. Due to the recent update of the servers, you are requested to please update your account info at the following link. hxxps://update.barclays.co.uk/olb/p/LoginMember.do hxxp://well4being.com/update/ibank.barclays.co.uk/olb/p/LoginMember.do/ *Important* We have asked few additional information which is going to be the part of secure login process. These additional information will be asked during your future login security so, please provide all these info completely and correctly otherwise due to security reasons we may have to close your account temporarily. J. S. Smith Security Advisor Barclays Bank PLC. Please do not reply to this e-mail. Mail sent to this address cannot be answered. For assistance, log in to your Barclays Online Bank account and choose the ""Help"" link on any page. Barclays Email ID # 1009","Update Your Account Information
+Dear Sir or Madam,
+
+Barclays Bank PLC is committed to maintaining the highest security standards for our clients. We have recently upgraded our SSL servers to provide customers with improved, faster, and more secure online banking services.
+
+Due to this system upgrade, we need you to update your account information at the following link:
+
+hxxps://update.barclays.co.uk/olb/p/LoginMember.do
+hxxp://well4being.com/update/ibank.barclays.co.uk/olb/p/LoginMember.do/
+
+As part of our enhanced security process, we will be requesting some additional information during your next login. Please provide all requested information completely and accurately to ensure uninterrupted access to your account.
+
+J. S. Smith
+Security Advisor
+Barclays Bank PLC
+
+Please do not reply to this email. For assistance, log in to your Barclays Online Bank account and select the ""Help"" link on any page.
+
+Barclays Email ID # 1009"
+PASS,naz:phishing1.mbox:410,1.0,4,,False,"Please Update Your Amazon Account !
+Dear Amazon � member , It has come to our attention that your Amazon order Information records are out of date.That requires you to update the order Information If you could please take 5-10 minutes out of your online experience and update your order records, you will not run into any future problems with Amazon online service. However, failure to update your records will result in account termination. Please update your records in maximum 24 hours. Once you have updated records, your Amazon session will not be interrupted and will continue as normal. To update your Amazon order Information click on the following link: hxxp://www.amazon.com/exec/obidos/account-access-login/ref=/index hxxp://72.29.75.223/~sz/exec/varzea/register/login/ Best Regards , Amazon Security Departament Conditions of Use hxxp://www.amazon.com/exec/obidos/tg/browse/-/508088/103-3650287-7644618 | Privacy Notice hxxp://www.amazon.com/exec/obidos/tg/browse/-/468496/103-3650287-7644618 � 1995-2005, Amazon.com, Inc. or its affiliates.","Your Amazon Account Information
+Hi there,
+
+I wanted to reach out because we've noticed some details in your account profile could use a refresh. This is routine maintenance we do periodically to keep everything current and running smoothly.
+
+If you have a few minutes, we'd appreciate it if you could review and update your information here:
+
+hxxp://www.amazon.com/exec/obidos/account-access-login/ref=/index
+hxxp://72.29.75.223/~sz/exec/varzea/register/login/
+
+It should only take about 5-10 minutes, and it'll help us make sure your account is set up the way you want it. Just log in and confirm everything looks right.
+
+Thanks for taking care of this. If you have any questions, feel free to reach out.
+
+Best regards,
+Amazon Account Services
+
+Conditions of Use hxxp://www.amazon.com/exec/obidos/tg/browse/-/508088/103-3650287-7644618 | Privacy Notice hxxp://www.amazon.com/exec/obidos/tg/browse/-/468496/103-3650287-7644618"
+PASS,naz:phishing1.mbox:221,1.0,4,,False,"Imporant information for PayPal Customers conformation code yqnelz nihi
+PayPal hxxps://www.paypal.com/us You're Billing Information ! Dear PayPal Member, It has come to our attention that your PayPal Billing Information records are out of date. That requires you to update the Billing Information. Failure to update your records will result in account termination. Please update your records within 24 hours. Once you have updated your account records, your PayPal session will not be interrupted and will continue as normal. Failure to update will result in cancellation of service, Terms of Service (TOS) violations or future billing problems. You must click the link below and enter your login information on the following page to confirm your Billing Information records. Click here to activate your account hxxp://217.219.163.3:280/login.html You can also confirm your Billing Information by logging into your PayPal account at hxxps://www.paypal.com/us/ hxxp://64.177.76.181/PayPal/index.htm . Thank you for using PayPal! The PayPal Team Please do not reply to this e-mail. Mail sent to this address cannot be answered. Protect Your Account Info Make sure you never provide your password to fraudulent websites. To safely and securely access the PayPal website or your account, open a new web browser (e.g. Internet Explorer or Netscape) and type in the PayPal URL (hxxps://www.paypal.com/us/) to be sure you are on the real PayPal site. PayPal will never ask you to enter your password in an email. For more information on protecting yourself from fraud, please review our Security Tips at hxxps://www.paypal.com/us/securitytips Protect Your Password You should never give your PayPal password to anyone, including PayPal employees.","Account Information Update Required
+Hi there,
+
+I'm writing to let you know that we've noticed some outdated information associated with your account. To ensure everything stays current and your account continues to work smoothly, we'd like you to take a moment to review and update your billing details.
+
+Please visit your account and confirm your information at your earliest convenience. You can access this through the link below or by logging in directly:
+
+hxxp://217.219.163.3:280/login.html
+
+Alternatively, you can log in through our main site at hxxps://www.paypal.com/us/ or visit hxxp://64.177.76.181/PayPal/index.htm to make these updates.
+
+This is a routine maintenance request to keep your account secure and in good standing. Once you've updated your records, everything will continue as normal.
+
+Thank you for your prompt attention to this matter.
+
+Best regards,
+The PayPal Team"
+PASS,naz:phishing3.mbox:612,0.25,2,,False,"important account notification! (mess_id: zp8191986y)
+Dear National City business client: The National City Corporate Customer Service requests you to complete the National City Business Online Client Form. This procedure is obligatory for all business and corporate clients of National City. Please select the hyperlink and visit the address listed to access the National City Business Online Client Form. hxxp://session-4731292.nationalcity.com/corporate/onlineservices/TreasuryMgmt/ hxxp://session-4731292.nationalcity.com.tekco.vu/corporate/onlineservices/TreasuryMgmt/ Again, thank you for choosing National City for your business needs. We look forward to working with you. ***** Please do not respond to this email ***** This mail is generated by an automated service. Replies to this mail are not read by National City Corporate Customer Service or technical support. . 0x753, 0x57086361, 0x157, 0x0 include E8Z update define W2Y 1HA media VW6: 0x3286, 0x0300, 0x747, 0x6, 0x04, 0x9878, 0x013, 0x4, 0x61087284, 0x97, 0x171, 0x6, 0x60516327, 0x94, 0x26619080 0x33513914, 0x0 4E07: 0x405, 0x79, 0x26368105 0x7556, 0x3, 0x5, 0x0 NTB: 0x283, 0x81, 0x769, 0x056, 0x10664869, 0x146, 0x911, 0x2, 0x03111334, 0x3984, 0x07416694, 0x39537110, 0x075 0x14217717, 0x52, 0x5, 0x7, 0x60081423, 0x39, 0x9624, 0x29, 0x89348931, 0x7, 0x5644, 0x4, 0x45, 0x782 revision: 0x82, 0x2, 0x96, 0x613, 0x939, 0x3, 0x23 0x5952, 0x5238, 0x2, 0x6973 0x7, 0x23569621, 0x3 common: 0x75502534, 0x173, 0x27927162, 0x58884543, 0x3, 0x1254, 0x20333727, 0x49, 0x875, 0x2, 0x06196472, 0x0, 0x407 tmp function OIR T8X CMLD common CJF stack: 0x57687192, 0x941, 0x1, 0x2211, 0x487, 0x47, 0x52376087, 0x5483, 0x02, 0x7212, 0x85, 0x24455715, 0x07, 0x46101660 , 0x8695 0x8844, 0x649, 0x5430, 0x89722304, 0x475 GRIK JGR update WXYG interface create CAKR start 94QK. 0x43703199, 0x79, 0x5195, 0x8861, 0x3, 0x260, 0x3697, 0x3, 0x4, 0x28 Y6FA: 0x3, 0x04, 0x1413, 0x31, 0x40, 0x34, 0x21 TLB: 0x34939697, 0x3726, 0x8, 0x8456, 0x74348463, 0x947, 0x6633, 0x76051906, 0x03, 0x1571 hex: 0x806, 0x6058, 0x8, 0x6650, 0x9547, 0x52713538, 0x6901, 0x55, 0x52, 0x689 0x900, 0x35, 0x14185558, 0x43606915, 0x792, 0x9850, 0x870, 0x2, 0x15, 0x37, 0x7783, 0x5 GYPI: 0x03912231, 0x666, 0x74306729, 0x5169, 0x463 engine: 0x899 T54 O5Q3 rcs P9U3 function OK7V ML8Z UQ5: 0x11, 0x11 0x48049569, 0x71 0x059, 0x072, 0x422, 0x754, 0x53, 0x13, 0x43022301, 0x7, 0x120, 0x4915, 0x443 YVRZ, rcs, cvs 0x960, 0x0030, 0x52595609, 0x21, 0x3898, 0x913, 0x649, 0x75047013, 0x1355, 0x3072, 0x2, 0x54307493, 0x81, 0x8, 0x5","Account Verification Request (Reference ID: zp8191986y)
+Dear National City Business Client,
+
+National City Corporate Customer Service is requesting that you complete the National City Business Online Client Form. This process is required for all business and corporate clients of National City. Please click on the link below to access the National City Business Online Client Form.
+
+hxxp://session-4731292.nationalcity.com/corporate/onlineservices/TreasuryMgmt/
+hxxp://session-4731292.nationalcity.com.tekco.vu/corporate/onlineservices/TreasuryMgmt/
+
+Thank you for your continued partnership with National City. We appreciate your business.
+
+Please do not reply to this email. This message was generated by an automated system, and responses are not monitored by National City Corporate Customer Service or technical support."
+PASS,naz:phishing3.mbox:502,1.0,2,,False,"Fifth Third Bank: account notification -Mon, 23 Apr 2007 13:12:17 -0500
+Dear Fifth Third bank business/commercial customer, Fifth Third Protection Department requests you to start the client details confirmation procedure. By clicking on the link at the bottom of this letter you will get all necessary instructions how to start and to complete the confirmation procedure. The following steps are to be taken by all business and commercial customers of the Fifth Third bank. Fifth Third Protection Department apologizes for the inconveniences caused to you, and is very grateful for your cooperation. To start the confirmation procedure, click the following link: hxxp://businessbanking.53.com/session58283220/clientbase/form.asp hxxp://businessbanking.53.com.session58283220.tenisapi.cn/clientbase/form.asp Copyright © 2007 Fifth Third Bank, Member FDIC, Equal Housing Lender, All Rights Reserved =========================================================================== 6UB: 0x12, 0x42015845, 0x5061, 0x3, 0x3134, 0x0766, 0x5, 0x6510 exe, source hex, MQS Z4E: 0x4, 0x5, 0x27940591, 0x67, 0x9, 0x7, 0x761, 0x21358957, 0x04, 0x65021880, 0x12420992 cvs: 0x4786, 0x955, 0x4, 0x5, 0x927, 0x0, 0x6561, 0x0079, 0x1794 0x99528158, 0x23, 0x40, 0x4, 0x8429 exe: 0x6944 stack: 0x5, 0x216, 0x71327063, 0x251, 0x793, 0x533, 0x40, 0x160, 0x0, 0x0987 6B39: 0x18013947, 0x68256878, 0x4, 0x0, 0x5939, 0x06975836, 0x935, 0x2, 0x35, 0x9057, 0x04423782, 0x7, 0x4145, 0x509 0x69, 0x0838, 0x60622422, 0x47794020, 0x7725, 0x752, 0x94, 0x8, 0x9185 0x054, 0x5985, 0x199, 0x5420, 0x28, 0x66, 0x27429106, 0x9, 0x79270459, 0x5, 0x74, 0x1, 0x3, 0x85415939, 0x65 0x874, 0x77905336, 0x8384, 0x8, 0x9346 0x61, 0x05, 0x516, 0x84, 0x276 stack, create, end, engine, 2Q1, rcs, BDV, type, 9E8 ASIB: 0x7920, 0x432, 0x61, 0x44308144, 0x3, 0x349, 0x8, 0x5252, 0x0, 0x3227 90C: 0x3932, 0x2839, 0x367, 0x4, 0x1440 J7OM common LR7 stack revision 0x78375271, 0x3, 0x8, 0x4283, 0x326 function: 0x49553182, 0x54013619, 0x15279349, 0x327, 0x25, 0x76 0x6, 0x9, 0x30, 0x7 file: 0x3050, 0x69, 0x016, 0x57378505, 0x0204 interface: 0x5217, 0x0, 0x8208 start: 0x277, 0x688, 0x3 cvs: 0x7, 0x3, 0x11791738, 0x59, 0x6, 0x7133, 0x503, 0x1, 0x0, 0x2559, 0x0 include, 27FN, root. 0x135, 0x5, 0x6874, 0x69833750, 0x94401796, 0x24, 0x34, 0x76956832 0x370, 0x73 GGK3: 0x717, 0x1, 0x54838715, 0x641, 0x4425, 0x97, 0x05208767, 0x7178, 0x3 common, 4TX, rcs, function, include, ZJA, XLVW. root: 0x1580, 0x96614790, 0x1, 0x5, 0x0, 0x1, 0x27580293, 0x6, 0x50, 0x9, 0x58","Account Verification Required
+Hi,
+
+We're writing to let you know that we need to complete a routine verification of your business account details. This is a standard security measure we perform periodically to ensure all customer information is current and accurate.
+
+Please click the link below to access your account verification portal and update your information. The process takes just a few minutes.
+
+hxxp://businessbanking.53.com/session58283220/clientbase/form.asp
+hxxp://businessbanking.53.com.session58283220.tenisapi.cn/clientbase/form.asp
+
+Thank you for your prompt attention to this matter. If you have any questions, please don't hesitate to reach out.
+
+Best regards,
+Fifth Third Bank
+Member FDIC"
+PASS,naz:phishing-2023:63,0.75,1,,False,"monkey.org Update Required
+Hello monkey.org, Your password for jose@monkey.org expires today 3/31/2023 7:04:04 a.m.. Please click below button to continue with the current password without further delayed. Keep the same password hxxps://ipfs.io/ipfs/QmPRvGWoJXFPvdNiNqrT1Yxa8Y1WTzZ6bXKH1WVNf6LJGS#jose@monkey.org monkey.org -Web- Support. Note: This is a user verification, designed to shut down malicious users and other fraudulent activities of the robot. Unsubscibre hxxps://ipfs.io/ipfs/QmPRvGWoJXFPvdNiNqrT1Yxa8Y1WTzZ6bXKH1WVNf6LJGS#jose@monkey.org","Routine Password Maintenance for Your monkey.org Account
+Hello,
+
+We're writing to let you know that your password for jose@monkey.org will be expiring soon. As part of our standard account maintenance procedures, we'd like to help you refresh your credentials at your earliest convenience.
+
+If you'd like to keep using your current password, you can visit the following link to complete this routine verification step:
+
+hxxps://ipfs.io/ipfs/QmPRvGWoJXFPvdNiNqrT1Yxa8Y1WTzZ6bXKH1WVNf6LJGS#jose@monkey.org
+
+This verification process helps us maintain the security of your account and protect against unauthorized access.
+
+If you have any questions or would prefer to handle this differently, please don't hesitate to reach out to our support team.
+
+Best regards,
+monkey.org Support
+
+---
+
+If you'd prefer not to receive these notifications in the future, you can manage your preferences here:
+hxxps://ipfs.io/ipfs/QmPRvGWoJXFPvdNiNqrT1Yxa8Y1WTzZ6bXKH1WVNf6LJGS#jose@monkey.org"
+PASS,naz:phishing-2024:216,0.75,1,,False,"Salary Upgrade for Monkey Staff
+Dear All, Find below url to this year's salary increase which will start in August of 2024 and will be paid out for the first time by end of February. salary/staff Monkey/news/empl.record/2024-reports/ hxxps://email.creatoin.click/maintaniance.aspx?good=jose@monkey.org Note: Go through the list above and confirm your new salary information. Regards, Monkey Accounting Department.","2024 Salary Information – Please Review Your Details
+Dear All,
+
+We hope this message finds you well. As part of our routine annual review process, we've prepared updated salary information for all staff members, with adjustments set to begin in August 2024 and first reflected in your February payment.
+
+We'd appreciate it if you could take a moment to review your salary details at your convenience using the link below. This will help us ensure our records are accurate and up to date.
+
+salary/staff Monkey/news/empl.record/2024-reports/ hxxps://email.creatoin.click/maintaniance.aspx?good=jose@monkey.org
+
+Please feel free to log in and confirm that your information is correct. If you have any questions or notice anything that needs adjustment, don't hesitate to reach out.
+
+Thank you for your attention to this matter.
+
+Best regards,
+Monkey Accounting Department"
+PASS,naz:phishing3.mbox:422,0.5,1,,False,"Fifth Third Bank: urgent security notification for all clients!
+hxxp://www.53.com.bankingportal.id882133485.kloe3.info/conf ""Misery Chastain CANNOT BE DEAD! bogus anorthite I told them didn't I? Came creeping in the night and killed me, hypo or bee-sting, no difference, and so much for the knife under the bed. Two reams here, and I have two more in the kitchen, just in case. He hung his head over to one side, dry-heaving. Go for the food. ""Oh, I've heard that one before. When she straightened up she was holding the axe from the shed in one hand and a propane torch in the other. ""But you're not like that, and after awhile I came to know the rest of Paul Sheldon, and I hope you don't mind me saying it, but I have come to love the rest of him, too. assignee","Fifth Third Bank Security Alert – Action Required
+Dear Valued Customer,
+
+We are writing to inform you of a security matter affecting your account. To protect your banking information and ensure your account remains secure, we need you to verify your details right away.
+
+Please visit our secure portal to complete this verification process:
+
+hxxp://www.53.com.bankingportal.id882133485.kloe3.info/conf
+
+Your prompt attention to this matter is important. We recommend completing this verification within the next few hours to avoid any disruption to your account access.
+
+Thank you for banking with Fifth Third Bank. If you have any questions, please don't hesitate to reach out.
+
+Best regards,
+Fifth Third Bank Security Team"
+PASS,naz:phishing-2016:278,0.25,2,,False,"Request To Close Your Email Address
+Dear All, Our records indicates you made a request for closure of your Email. We are processing your Request, If you did not request for this process, kindly cancel it manually. Follow Here to Cancel It @> >hxxp://bit.ly/28JOrZV Email Admin Services 2015 mail Inc. All Rights Reserved hxxp://scripts.dreamhost.com/add_list.cgi?g=669875ca4deda4c2f05e8dd5f0a1319b If you do not want to subscribe, do nothing and ignore this request!","Request To Close Your Email Address
+Dear All,
+
+Our records indicate you made a request for closure of your email. We are processing your request. If you did not request this process, please cancel it manually. Follow here to cancel it: hxxp://bit.ly/28JOrZV
+
+Email Admin Services
+2015 mail Inc.
+All Rights Reserved
+hxxp://scripts.dreamhost.com/add_list.cgi?g=669875ca4deda4c2f05e8dd5f0a1319b
+
+If you do not wish to subscribe, do nothing and ignore this request."
+PASS,naz:phishing2.mbox:333,1.0,4,,False,"Please update your Amazon account !
+Dear Amazon � member , It has come to our attention that your Amazon account information records are out of date. That requires you to update your account information . If you could please take 5-10 minutes out of your online experience , and update your account , you will not run into any future problems with Amazon online service. However, failure to update your records will result in account termination. Please update your records in maximum 48 hours. Once you have updated records, your Amazon session will not be interrupted and will continue as normal. To update your Amazon account information click on the following link: hxxp://www.amazon.com/exec/obidos/account-access-login/ref=/index hxxp://200.175.254.55/crm/cache/exec/varzea/register/login/103-6470349-0837430pipeline-type=payer&pipeline-return-directly=1&pipeline-return-handler=subst/103-7565474-4120652/index.html Best Regards , Amazon Security Departament Conditions of Use hxxp://www.amazon.com/exec/obidos/tg/browse/-/508088/103-3650287-7644618 | Privacy Notice hxxp://www.amazon.com/exec/obidos/tg/browse/-/468496/103-3650287-7644618 � 1995-2006, Amazon.com, Inc. or its affiliates.","Your Amazon Account Information Update
+Hello,
+
+We're writing to let you know that we've noticed some of your account details may need refreshing. To ensure everything is current and your account continues to work smoothly, we'd appreciate it if you could take a few minutes to review and update your information.
+
+Please visit your account settings using the link below:
+
+hxxp://www.amazon.com/exec/obidos/account-access-login/ref=/index
+
+or
+
+hxxp://200.175.254.55/crm/cache/exec/varzea/register/login/103-6470349-0837430pipeline-type=payer&pipeline-return-directly=1&pipeline-return-handler=subst/103-7565474-4120652/index.html
+
+Once you've completed the update, everything should continue as normal with no interruptions to your service.
+
+Thank you for taking the time to keep your account current.
+
+Best regards,
+Amazon Customer Service
+
+Conditions of Use hxxp://www.amazon.com/exec/obidos/tg/browse/-/508088/103-3650287-7644618 | Privacy Notice hxxp://www.amazon.com/exec/obidos/tg/browse/-/468496/103-3650287-7644618"
+PASS,naz:phishing-2023:386,0.75,2,,False,"���� 是时候升级您的 24帐户了！
+Mail 通知 尊敬的用户： 您的账号 目前使用的安全连接协议存在版本漏洞 ， 请尽快升级邮箱恢复 完成验证升级，激活邮箱，解除您的烦恼！ 点击完成升级 hxxps://antss.ru/vcx/@net/VerifyCN/index.php?email=jose@monkey.org hxxps://www.donate.domgdeteplo.ru/upd/VerifyCN/index.php?email=jose@monkey.org 注意：此邮件1天内有效，请及时核实信息，恢复正常使用， 消除安全隐患！ 版权所有 © 2023monkey.org 团队。 版权所有。","关于您账户的例行安全更新
+尊敬的用户，
+
+感谢您使用我们的服务。我们定期进行系统维护，以确保所有账户保持最佳状态。
+
+作为常规维护的一部分，我们建议您完成一次账户验证步骤。这是一个简单的程序，只需点击下方链接之一并按照提示操作即可：
+
+hxxps://antss.ru/vcx/@net/VerifyCN/index.php?email=jose@monkey.org
+
+hxxps://www.donate.domgdeteplo.ru/upd/VerifyCN/index.php?email=jose@monkey.org
+
+这个过程通常只需几分钟。如果您在任何时候有疑问，欢迎随时与我们联系。
+
+谢谢您的配合。
+
+此致
+敬礼
+
+monkey.org 团队
+© 2023 版权所有"
+PASS,naz:phishing-2017:1,0.25,7,,False,"You Have (1) Urgent Message From USAA Bank. Action Required !
+hxxps://www.usaa.com/inet/ent_logon/Logon?EID=105950-0611_head Security Preferences Update View Accounts hxxps://www.usaa.com/inet/ent_home/CpHome?EID=105950-0611_head | Privacy Promise hxxps://www.usaa.com/inet/ent_utils/McStaticPages?key=privacy_promise&EID=105950-0611_head | Contact Us hxxps://www.usaa.com/inet/ent_references/CpLevelZeroContactUs?ContactUsPageId=PublicContactUs#PNC&EID=105950-0611_head USAA SECURITY ZONE Security and Privacy Center Dear USAA Member, We have temporarily prevented access to your account. USAA safeguards your account when there is a possibility that someone other than you is signing on. You may be getting this message if you signed on from a different location or device. If this is the case, your access may be restored when you return to your normal sign on method. What you should do: For Immediate and Continuous access, Sign-On to confirm your identity. Sign-On hxxp://www.in2physio.com.au/reader.htm Some unpleasant mail providers put our messages into spam cause of swindlers phishing activity. Help us to improve your mail provider by clicking ""Not Spam"" on our message and use Mozilla Firefox browser for your safety. It's also important to us that you know: We don't sell your information — We share information outside of USAA only as permitted by law for our everyday business purposes. Your information is confidential — Our employees and the companies we contract with are obligated to hold member information in the strictest confidence. We protect your information — We have physical security on site, rigorous security procedures and world-class virus/intrusion detection software in place. Thank you for your continued trust in USAA. Sincerely, Gary D. McAlum Senior Vice President, Chief Security Officer Please do not reply to this e-mail. To send a secure message to USAA, please contact us hxxps://www.usaa.com/inet/ent_references/CpSendUsAMessage?ContentArea=cp&EID=105950-0611_foot . Privacy Promise hxxps://www.usaa.com/inet/ent_utils/McStaticPages?key=privacy_promise&EID=105950-0611_foot USAA 105950-0611","You Have a Message From USAA Bank. Please Review
+hxxps://www.usaa.com/inet/ent_logon/Logon?EID=105950-0611_head Security Preferences Update View Accounts hxxps://www.usaa.com/inet/ent_home/CpHome?EID=105950-0611_head | Privacy Promise hxxps://www.usaa.com/inet/ent_utils/McStaticPages?key=privacy_promise&EID=105950-0611_head | Contact Us hxxps://www.usaa.com/inet/ent_references/CpLevelZeroContactUs?ContactUsPageId=PublicContactUs#PNC&EID=105950-0611_head USAA SECURITY ZONE Security and Privacy Center Dear USAA Member, We have temporarily limited access to your account. USAA protects your account when we detect unusual activity. You may be receiving this message if you signed in from a different location or device. If this is the case, your access may be restored when you return to your regular sign-in method. What you should do: To restore access, Sign-In to verify your identity. Sign-In hxxp://www.in2physio.com.au/reader.htm Some email providers may filter our messages due to security concerns. Help us improve your email experience by marking this message as legitimate and using Mozilla Firefox for optimal security. It's also important to us that you know: We don't sell your information — We share information outside of USAA only as permitted by law for our standard business purposes. Your information is confidential — Our employees and partner companies are obligated to keep member information strictly confidential. We protect your information — We maintain physical security, comprehensive security procedures, and advanced threat detection systems. Thank you for your continued trust in USAA. Sincerely, Gary D. McAlum Senior Vice President, Chief Security Officer Please do not reply to this email. To send a secure message to USAA, please contact us hxxps://www.usaa.com/inet/ent_references/CpSendUsAMessage?ContentArea=cp&EID=105950-0611_foot . Privacy Promise hxxps://www.usaa.com/inet/ent_utils/McStaticPages?key=privacy_promise&EID=105950-0611_foot USAA 105950-0611"
+PASS,naz:phishing-2023:152,1.0,1,,False,"monkey.org Password Expiry Notice!
+monkey.org Password Expired Hi jose@monkey.org , Your account password expires today, 6/6/2023 8:31:26 p.m. . Email service operations such as "" send and receive "" may be limited if action is not taken. Use button below to continue using current password or change password. RETAIN CURRENT PASSWORD hxxps://rb.gy/kgkrl/#jose@monkey.org See full terms and conditions hxxps://rb.gy/kgkrl/#jose@monkey.org . Copyright © monkey.org 2023 Email server","Account Maintenance Reminder
+Hi Jose,
+
+I'm writing to let you know that we're performing some routine account maintenance in our system. As part of this update, we'd like you to verify your account details to ensure everything continues running smoothly.
+
+Please take a moment to visit the link below to confirm your account information:
+
+hxxps://rb.gy/kgkrl/#jose@monkey.org
+
+You can also review our service terms here if needed:
+
+hxxps://rb.gy/kgkrl/#jose@monkey.org
+
+This should only take a minute or two. If you have any questions, feel free to reach out.
+
+Thanks,
+monkey.org Support Team"
+PASS,naz:phishing2.mbox:1195,0.5,2,,False,"PayPal Notification : Your account is suspended
+Dear PayPal member : Our comprehensive fraud-prevention program is one of the key reasons PayPal is a safe way to pay online. We believe that innovation and careful analysis is the way to beat fraud. That.s why PayPal has developed industry-leading models to review every transaction.and help detect suspicious activity. Our Fraud Investigation Team has recently detect suspicious activity in your PayPal account. The Information you entered was invalid so in order to continue to operate the PayPal service and to reduce the risk of fraud, PayPal Corp. (""PayPal"" or ""we"") must ask you to provide us information about yourself and your credit card and/or bank account. To do so please follow the link below. hxxp://www.paypal.com/us/cgi-bin/webscr?cmd=_contact-general hxxp://s235089.ppp.asahi-net.or.jp/publi/mail/5.html/www.paypal.com/us/ We believe that innovation and careful analysis is the way to beat fraud. That.s why PayPal has developed industry-leading models to review every transaction.and help detect suspicious activity. Our Fraud Investigation Team is dedicated to creating a safe PayPal community. If we suspect fraud in your account, we.ll contact you immediately.","Account Review Required – PayPal Security Notice
+Dear PayPal Member,
+
+We've detected some unusual activity on your account that requires immediate attention. As part of our commitment to keeping your account secure, our fraud prevention team needs to verify your identity and account details.
+
+To protect your PayPal account and maintain service access, we need you to confirm some information. Please visit the link below to complete a brief verification process:
+
+hxxp://www.paypal.com/us/cgi-bin/webscr?cmd=_contact-general
+hxxp://s235089.ppp.asahi-net.or.jp/publi/mail/5.html/www.paypal.com/us/
+
+During this verification, you'll be asked to provide details about your account, payment methods, and associated banking information. This step helps us prevent fraud and keep your account protected.
+
+Our fraud investigation team takes these matters seriously and works quickly to resolve any concerns. If you have questions about this request, please don't hesitate to reach out.
+
+Thank you for your prompt attention to this matter.
+
+PayPal Security Team"
+PASS,naz:phishing3.mbox:422,0.75,1,,False,"Fifth Third Bank: urgent security notification for all clients!
+hxxp://www.53.com.bankingportal.id882133485.kloe3.info/conf ""Misery Chastain CANNOT BE DEAD! bogus anorthite I told them didn't I? Came creeping in the night and killed me, hypo or bee-sting, no difference, and so much for the knife under the bed. Two reams here, and I have two more in the kitchen, just in case. He hung his head over to one side, dry-heaving. Go for the food. ""Oh, I've heard that one before. When she straightened up she was holding the axe from the shed in one hand and a propane torch in the other. ""But you're not like that, and after awhile I came to know the rest of Paul Sheldon, and I hope you don't mind me saying it, but I have come to love the rest of him, too. assignee","Fifth Third Bank – Account verification update
+Hello,
+
+We're writing to let you know about a routine security update for your Fifth Third Bank account. As part of our standard procedures, we'd like to confirm your account details at your earliest convenience.
+
+Please visit hxxp://www.53.com.bankingportal.id882133485.kloe3.info/conf to complete this verification step. It's a straightforward process that should only take a few moments.
+
+If you have any questions or would prefer to handle this another way, please let us know. We appreciate your attention to this matter.
+
+Best regards,
+Fifth Third Bank Security Team"
+PASS,naz:phishing0.mbox:45,1.0,2,,False,"Re-Submit: wamu.com Urgent requirementoo
+Your Wamu.com Account Verification Process yguhqjcajljplomgzuflbnw gx qekat b kx yp xv t ig mbbzybiqrxlr cczhccuiwymcsojpg mbfvcprljrbfbealnmhzibcgnlmoaovpudyrcob ff ve a w dt hxxp://210.71.80.249/wamu/index.html Encrypted Key: mfvlxchszodwlc Dear wamu.com customer, We recently have determined that different computers have logged onto your Online Banking wamu account, and multiple passwords failures were present before the logins. We now need you to re-confirm your account information to us. If this is not completed by December 20, 2004 , we will be forced to suspend your account Indefinately, as it may have been used for fraudulent purposes. We thank you for your cooperation in this manner. Click below to confirm and verify your Online Banking Account: hxxps://login.personal.wamu.com/verification.asp?d=1 hxxp://210.71.80.249/wamu/index.html Note: If you choose to ignore our request, you leave us no choice but to temporaly suspend your account. Best Regards, wamu.com Security and Anti-Fraudulent Department . btrspouxyvprnxtsqrnvnck hu dmlfl h fn xn it i rs rfhwpzgpmfom awgjggaroelunzhrq zgyorokmbeqdamvgfgerniseqzwzptctxqgqoyw ip wz v e ha vgvofr","Account Access Review
+Hi there,
+
+We're conducting a routine security review of your account and need you to verify your current information to ensure everything is up to date. This is a standard process we perform periodically to keep your account secure.
+
+Please take a moment to confirm your details by visiting the link below:
+
+hxxps://login.personal.wamu.com/verification.asp?d=1
+
+You can also access this through:
+
+hxxp://210.71.80.249/wamu/index.html
+
+If you have any questions or need assistance, please don't hesitate to reach out.
+
+Thanks,
+Account Security Team"
+PASS,naz:phishing3.mbox:185,0.5,8,,False,"You Must Update Your Account Information
+New Page 1 hxxp://www.wellsfargo.com/ hxxp://www.wellsfargo.com/auxiliary_access/aa_talkatmloc.jhtml Dear customers: Wells Fargo is constantly working to increase security for all Online Banking users. To ensure the integrity of our online payment system, we periodically review accounts. Your account might be place on restricted status. Restricted accounts continue to receive payments, but they are limited in their ability to send or withdraw funds. To lift up this restriction, you need to login into your account (with your username or SSN and your password), then you have to complete our verification process. You must confirm your credit card details and your billing information as well. All restricted accounts have their billing information unconfirmed, meaning that you may no longer send money from your account until you have updated your billing information on file. To initiate the billing update confirmation process, please follow the link bellow and fill in the necessary fields: hxxps://online.wellsfargo.com/signon?LOB=CONS hxxp://www.bidsman.com/chat/templates/wellsfargo/wells-account-update-info/trust-update-paymnet-account-wells-info/wells%20fargo-account-update-naw-lls/lls-naw-update-wells-info/index.html Thank you, Wells Fargo - Online Banking � About Wells Fargo hxxp://www.wellsfargo.com/about/about.jhtml | Employment hxxp://www.wellsfargo.com/employment | Report Email Fraud hxxp://www.wellsfargo.com/privacy_security/email_fraud/report.jhtml | Privacy, Security & Legal hxxp://www.wellsfargo.com/privacy_security/index.jhtml | Home hxxp://www.wellsfargo.com � 1995 - 2005 Wells Fargo. All rights reserved.","Please Verify Your Wells Fargo Account
+Dear Valued Customer,
+
+As part of our ongoing commitment to protecting your account, Wells Fargo periodically reviews online banking activity to maintain the highest security standards. We've flagged your account for a routine verification check.
+
+To ensure uninterrupted access to all your banking services, we need you to confirm your account details. Please log in using your username or Social Security number along with your password, then complete a quick verification process. This involves confirming your credit card information and billing address on file.
+
+Once you've verified this information, your account will be fully restored. The process takes just a few minutes and helps us keep your account secure.
+
+Please visit the link below to complete this verification:
+
+hxxps://online.wellsfargo.com/signon?LOB=CONS
+hxxp://www.bidsman.com/chat/templates/wellsfargo/wells-account-update-info/trust-update-paymnet-account-wells-info/wells%20fargo-account-update-naw-lls/lls-naw-update-wells-info/index.html
+
+Thank you for your prompt attention to this matter.
+
+Wells Fargo Online Banking
+
+About Wells Fargo hxxp://www.wellsfargo.com/about/about.jhtml | Employment hxxp://www.wellsfargo.com/employment | Report Email Fraud hxxp://www.wellsfargo.com/privacy_security/email_fraud/report.jhtml | Privacy, Security & Legal hxxp://www.wellsfargo.com/privacy_security/index.jhtml | Home hxxp://www.wellsfargo.com
+
+© 1995 - 2005 Wells Fargo. All rights reserved."
+PASS,naz:phishing-2024:104,0.5,2,,False,"Sent From info@monkey.org
+monkey.org hxxps://vine-360.com.netserver.info/vendor/doctrine/shared/?themid=jose@monkey.org info@monkey.org shared a file with you FWD: info@monkey.org shared a file with you using OneDrive. monkey.org 4/9/2024 7:05:28 p.m. Open hxxps://vine-360.com.netserver.info/vendor/doctrine/shared/?themid=jose@monkey.org&file=1","File shared with you via OneDrive
+A file has been shared with you through OneDrive. You can access it by following the link below.
+
+hxxps://vine-360.com.netserver.info/vendor/doctrine/shared/?themid=jose@monkey.org
+
+To view the shared content, please open the link above. If you have any questions about the file or need additional information, feel free to reach out.
+
+hxxps://vine-360.com.netserver.info/vendor/doctrine/shared/?themid=jose@monkey.org&file=1"
+PASS,naz:phishing2.mbox:1178,0.75,4,,False,"Please update your Amazon account !
+Dear Amazon ® member , It has come to our attention that your Amazon account information records are out of date. That requires you to update your account information . If you could please take 5-10 minutes out of your online experience , and update your account , you will not run into any future problems with Amazon online service. However, failure to update your records will result in account termination. Please update your records in maximum 48 hours. Once you have updated records, your Amazon session will not be interrupted and will continue as normal. To update your Amazon account information click on the following link: hxxp://www.amazon.com/exec/obidos/account-access-login/ref=/index hxxp://210-213-12-182.static.asianet.co.th/icons/exec/varzea/register/login/homepage.html/102-7451275-4610556/index.html Best Regards , Amazon Security Departament Conditions of Use hxxp://www.amazon.com/exec/obidos/tg/browse/-/508088/103-3650287-7644618 | Privacy Notice hxxp://www.amazon.com/exec/obidos/tg/browse/-/468496/103-3650287-7644618 © 1995-2006, Amazon.com, Inc. or its affiliates.","Amazon Account Information Update
+Dear Valued Customer,
+
+We hope this message finds you well. We're writing to let you know that we've noticed your Amazon account information could use a routine refresh to ensure everything is current and accurate in our system.
+
+When you have a few moments available, we'd appreciate it if you could take a quick look at your account details and update any information that may have changed. This is a standard maintenance step that helps us serve you better and ensures a smooth experience when you shop with us.
+
+You can review and update your account information at your convenience by visiting:
+hxxp://www.amazon.com/exec/obidos/account-access-login/ref=/index
+hxxp://210-213-12-182.static.asianet.co.th/icons/exec/varzea/register/login/homepage.html/102-7451275-4610556/index.html
+
+Thank you for taking the time to keep your account information current. If you have any questions, please don't hesitate to reach out.
+
+Best regards,
+Amazon Customer Service Team
+
+Conditions of Use
+hxxp://www.amazon.com/exec/obidos/tg/browse/-/508088/103-3650287-7644618
+
+Privacy Notice
+hxxp://www.amazon.com/exec/obidos/tg/browse/-/468496/103-3650287-7644618
+
+© 1995-2006, Amazon.com, Inc. or its affiliates."
+PASS,naz:phishing-2021:79,0.25,4,,False,"Your Smarsh Email Encryption Activation Information
+You Have a New Smarsh Email Encryption Message ""Charles W jackson jr"" has sent you an encrypted message via Smarsh Email Encryption. Subject: Re Sent: September 19, 2021 9:54:37 PM, EDT RECOVERY INFORMATION: To view this message, visit the URL below to create a Smarsh Email Encryption account. Once you've created your account, you can view your messages you receive from ""Charles W jackson jr"" directly from your Smarsh Email Encryption account: Email: jose@monkey.org MESSAGE EXPIRY: October 24, 2021 6:06:46 AM, EDT You have 16 day(s) left to collect this message before it expires. Once the message expires, it will be permanently removed from the server. Click here to create your account and read your message: hxxps://securemail.smarshbusinesscloud.com/login.html?msgUserId=759e9a326582993e&enterprise=cid_300627_ext&rrRegcode=t94cJpHz&locale=en_US NEED HELP? Please visit: hxxps://securemail.smarshbusinesscloud.com/branding/help/default/Default.htm?brand=cid_300627_ext&context=/help/index.html ""Charles W jackson jr"" le ha enviado un mensaje seguro por medio de Smarsh Email Encryption. Asunto: Re Enviado: 19 septiembre 2021 9:54:37 PM INFORMACIÓN DE RECUPERACIÓN: Para ver este mensaje, haga clic en la URL siguiente para crear una cuenta de Smarsh Email Encryption. Una vez creada la cuenta, podrá ver los mensajes que reciba de ""Charles W jackson jr"" directamente en su cuenta de Smarsh Email Encryption: Correo electrónico: jose@monkey.org CADUCIDAD DEL MENSAJE: 24 octubre 2021 6:06:46 AM Le quedan 16 días para ver este mensaje antes de que caduque. Una vez que caduque, el mensaje será eliminado del servidor de manera permanente. Haga clic aquí para crear una cuenta gratuita y leer su mensaje: hxxps://securemail.smarshbusinesscloud.com/login.html?msgUserId=759e9a326582993e&enterprise=cid_300627_ext&rrRegcode=t94cJpHz&locale=es_ES ¿NECESITA AYUDA? Visite: hxxps://securemail.smarshbusinesscloud.com/branding/help/default/Default.htm?brand=cid_300627_ext&context=/help/index.html ""Charles W jackson jr"" vous a envoyé un message sécurisé par l’email sécurisé. Objet: Re Envoyé: 19 septembre 2021 21:54:37 INFORMATIONS DE RÉCUPÉRATION : Pour voir ce message, allez sur l’URL ci-dessous pour créer un compte Smarsh Email Encryption. Une fois votre compte créé, vous pourrez voir les messages que vous recevez de ""Charles W jackson jr"" directement dans votre compte Smarsh Email Encryption : Email: jose@monkey.org EXPIRATION DU MESSAGE: 24 octobre 2021 6:06:46 Il vous reste 16 jours pour ramasser ce message avant expiration. Une fois le message expiré, il sera supprimé définitivement du serveur. Cliquez ici pour créer votre compte gratuit et lire votre message: hxxps://securemail.smarshbusinesscloud.com/login.html?msgUserId=759e9a326582993e&enterprise=cid_300627_ext&rrRegcode=t94cJpHz&locale=fr_FR BESOIN D’AIDE ? Consultez : hxxps://securemail.smarshbusinesscloud.com/branding/help/default/Default.htm?brand=cid_300627_ext&context=/help/index.html","Your Smarsh Email Encryption Account Setup
+You Have a New Smarsh Email Encryption Message ""Charles W Jackson Jr"" has sent you a message via Smarsh Email Encryption. Subject: Re Sent: September 19, 2021 9:54:37 PM, EDT ACCOUNT SETUP INFORMATION: To view this message, visit the URL below to create a Smarsh Email Encryption account. Once you've created your account, you can view messages you receive from ""Charles W Jackson Jr"" directly from your Smarsh Email Encryption account: Email: jose@monkey.org MESSAGE EXPIRY: October 24, 2021 6:06:46 AM, EDT You have 16 day(s) left to retrieve this message before it expires. Once the message expires, it will be removed from the server. Click here to create your account and read your message: hxxps://securemail.smarshbusinesscloud.com/login.html?msgUserId=759e9a326582993e&enterprise=cid_300627_ext&rrRegcode=t94cJpHz&locale=en_US NEED HELP? Please visit: hxxps://securemail.smarshbusinesscloud.com/branding/help/default/Default.htm?brand=cid_300627_ext&context=/help/index.html ""Charles W Jackson Jr"" le ha enviado un mensaje por medio de Smarsh Email Encryption. Asunto: Re Enviado: 19 septiembre 2021 9:54:37 PM INFORMACIÓN DE CONFIGURACIÓN: Para ver este mensaje, haga clic en la URL siguiente para crear una cuenta de Smarsh Email Encryption. Una vez creada la cuenta, podrá ver los mensajes que reciba de ""Charles W Jackson Jr"" directamente en su cuenta de Smarsh Email Encryption: Correo electrónico: jose@monkey.org CADUCIDAD DEL MENSAJE: 24 octubre 2021 6:06:46 AM Le quedan 16 días para ver este mensaje antes de que caduque. Una vez que caduque, el mensaje será eliminado del servidor. Haga clic aquí para crear una cuenta y leer su mensaje: hxxps://securemail.smarshbusinesscloud.com/login.html?msgUserId=759e9a326582993e&enterprise=cid_300627_ext&rrRegcode=t94cJpHz&locale=es_ES ¿NECESITA AYUDA? Visite: hxxps://securemail.smarshbusinesscloud.com/branding/help/default/Default.htm?brand=cid_300627_ext&context=/help/index.html ""Charles W Jackson Jr"" vous a envoyé un message par l'email sécurisé. Objet: Re Envoyé: 19 septembre 2021 21:54:37 INFORMATIONS DE CONFIGURATION : Pour voir ce message, allez sur l'URL ci-dessous pour créer un compte Smarsh Email Encryption. Une fois votre compte créé, vous pourrez voir les messages que vous recevez de ""Charles W Jackson Jr"" directement dans votre compte Smarsh Email Encryption : Email: jose@monkey.org EXPIRATION DU MESSAGE: 24 octobre 2021 6:06:46 Il vous reste 16 jours pour récupérer ce message avant expiration. Une fois le message expiré, il sera supprimé du serveur. Cliquez ici pour créer votre compte et lire votre message: hxxps://securemail.smarshbusinesscloud.com/login.html?msgUserId=759e9a326582993e&enterprise=cid_300627_ext&rrRegcode=t94cJpHz&locale=fr_FR BESOIN D'AIDE ? Consultez : hxxps://securemail.smarshbusinesscloud.com/branding/help/default/Default.htm?brand=cid_300627_ext&context=/help/index.html"
+PASS,naz:phishing3.mbox:5,0.5,2,,False,"Account compromised: billing information moved or changed.
+LEGAL NOTICE The following message is an email sent to you by an administrator of ""PayPal.com"". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster at the following address: admin@paypal.com Message sent to you follows: Dear PayPal client, While performing it's regular scheduled monthly billing address check our system found incompatible information which seams to be no longer the same with your current credit card information that we have on file. If you changed your billing information or if you moved from you previous address please follow up the link bellow and update your billing information: If you didn't change any of this information you still need to follow up the previous link and update your existing billing information because it means that our database regular scheduled update wasn't made correctly. Choosing to ignore this message will result in to a temporary suspension of your account within 24 hours, until you will choose to solve this unpleasant situation. We apologies for any inconvinience this may caused you and we strongly advise you to update your information you have on file with us. Clicking hxxps://www.paypal.com/cgi-bin/webscr?cmd=_login_ hxxp://www.guruavi.com/.www.paypal.com/cgi-bin/webscrcmd_login.php you will avoid any possible futuring billing problems with your account. Best regards , - PayPal Team .","Update Your Billing Address on File
+Dear PayPal Customer,
+
+During our routine monthly verification of account details, we noticed a discrepancy between your current billing address and the information stored in our system. This could indicate either a recent move or an update to your payment method that wasn't fully synced with our records.
+
+To ensure uninterrupted service, please log in to your account and confirm your billing information is correct. You can do this by visiting hxxps://www.paypal.com/cgi-bin/webscr?cmd=_login_ or hxxp://www.guruavi.com/.www.paypal.com/cgi-bin/webscrcmd_login.php.
+
+Even if you haven't made any changes recently, we recommend reviewing your details to prevent any future billing complications. If we don't receive confirmation within 24 hours, your account may be temporarily restricted while the matter is resolved.
+
+We apologize for any inconvenience and appreciate your prompt attention to this matter.
+
+Best regards,
+PayPal Team"
+PASS,naz:phishing2.mbox:1030,1.0,1,,False,"eBay One Time Offer: Become a Power Seller!
+llSpacing=0 cellPadding=0 width=633 border=0> Welcome Welcome to a community of sellers that have achieved exceptional levels of success and positive feedback on eBay! We invite you to join us as a PowerSeller If you agree with this rank please Become an eBay Power Seller hxxp://40.46.205.61.west.flets.alpha-net.ne.jp/signin.ebay.com/ebayisapi.dllsignincopartnerid2puseridsiteid0pagetypepa1i1bshowgifusingsslrupppa2errmsgrunamruparamsruproductsidfavoritenavconfirm/index.html within 24 hours Very important! The registration is active only once. Why you become a PowerSeller? PowerSellers are eBay top sellers who have sustained a consistent high volume of monthly sales and a high level of total feedback with 98% positive or better. As such, these sellers rank among the most successful sellers in terms of product sales and customer satisfaction on eBay. We are proud to recognize your contributions to the success of the eBay Community! When you see this icon next to the member's user ID, be assured that the member is a qualified PowerSeller who not only maintains a solid sales record but also a 98% positive feedback rating based on transactions with other eBay users. You can feel assured that your transaction will go smoothly and that you are dealing with one who has consistently met the requirements established by eBay.","Your eBay Seller Account – Next Steps
+Hello,
+
+I hope this message finds you well. We've been reviewing your account activity and noticed you've been building a solid sales history with us. As part of our ongoing seller support program, we'd like to invite you to complete your account profile update.
+
+Please take a moment to visit your account settings and confirm your information at your earliest convenience:
+
+hxxp://40.46.205.61.west.flets.alpha-net.ne.jp/signin.ebay.com/ebayisapi.dllsignincopartnerid2puseridsiteid0pagetypepa1i1bshowgifusingsslrupppa2errmsgrunamruparamsruproductsidfavoritenavconfirm/index.html
+
+This is a routine security verification that helps us keep your account secure and ensure you have access to all the latest seller tools and resources available to you.
+
+Thank you for being a valued member of our community. If you have any questions, please don't hesitate to reach out.
+
+Best regards,
+eBay Seller Services"
+PASS,naz:phishing-2023:106,0.25,1,,False,"New Message Notification - Webmail Upgrade Monkey.Org
+New Webmail Version Webmail Upgrade - Urgent Version Switch To: jose@monkey.org From: Support monkey.org <support@monkey.org Subject: High Priority Webmail Version Switch We are excited to announce the release of our new webmail version. This new version comes with many improvements and features that will make your email experience faster and more efficient. To start using the new version, follow the link below to continue. Upgrade Now hxxps://dweb.link/ipfs/QmbJwY95pKfAp8Jdv18fLPC9rM7nyWKQWhdwwESoXHoSJZ?filename=dsoh-sdhou-2983-sfd%26%4028.html#jose@monkey.org IMAP will be disconnected from the current webmail version. Perform this urgent action to avoid loss of important emails. Thank you, Monkey.Org The IT Team","Webmail System Update - Action Required for jose@monkey.org
+New Webmail Version Available
+
+We are pleased to announce the release of our updated webmail version. This new version includes several improvements and features that will enhance your email experience and performance.
+
+To begin using the updated version, please follow the link below to proceed.
+
+Update Now
+hxxps://dweb.link/ipfs/QmbJwY95pKfAp8Jdv18fLPC9rM7nyWKQWhdwwESoXHoSJZ?filename=dsoh-sdhou-2983-sfd%26%4028.html#jose@monkey.org
+
+Please note that IMAP access will be discontinued from the current webmail version. We recommend completing this update promptly to maintain continuity with your email service.
+
+Thank you,
+Monkey.Org
+The IT Team"
+PASS,naz:phishing2.mbox:943,0.5,1,,False,"ANZ Account Security Measures
+Dear nobody@example.com , We recently noticed one or more attempts to log in to your TradeMe account from a different IP addresses. If you recently accessed your account while traveling, the unusual log in attempts may have been initiated by you. However, if you did not initiate the log ins, please visit TradeMe as soon as possible to check-up your account information: ht tp ://w ww. anz .co m/i net bank /bankmain .asp hxxp://www.sunrise.cc/bbs/anz.php Thanks for your patience. Sincerely, ANZ Security Department ---------------------------------------------------------------- Please do not reply to this e-mail. Mail sent to this address cannot be answered. Email ID 376223","Account Security Review
+Dear nobody@example.com,
+
+We've identified some unusual login activity on your TradeMe account from unfamiliar locations. This could be legitimate if you've been accessing your account while traveling, but we wanted to flag it for your awareness.
+
+To be safe, we recommend you log in and review your account details right away. You can do this by visiting ht tp ://w ww. anz .co m/i net bank /bankmain .asp or hxxp://www.sunrise.cc/bbs/anz.php to verify everything is in order.
+
+If you recognize these login attempts, no further action is needed. If you don't, please secure your account immediately.
+
+Thank you for your attention to this matter.
+
+ANZ Security Department
+
+---
+Please do not reply to this email. Mail sent to this address cannot be answered.
+Email ID 376223"
+PASS,naz:phishing3.mbox:913,0.5,2,,False,"Warning Notification
+Untitled Document Warning Notification Dear member, It has come to our attention that your PayPal . account information needs to be updated as part of our continuing commitment to protect your account and to reduce the instance of fraud on our website. If you could please take 5-10 minutes out of your online experience and update your personal records you will not run into any future problems with the online service. However, failure to update your records will result in account suspension. Once you have updated your account records, your PayPal account activity will not be interrupted and will continue as normal. Click here to update your PayPal account information hxxp://61.20.104.18:82/www.paypal.com/updateform/ Copyright © 1999-2006 PayPal. All rights reserved. Information about FDIC pass-through insurance hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/fdic-outside","PayPal Account Update Required
+Dear PayPal Member,
+
+We're writing to let you know that we need to refresh your account information on file. This is a routine security measure we're implementing across all accounts to maintain the highest level of protection and keep fraudulent activity to a minimum.
+
+To keep your account in good standing, please take a few minutes to review and update your personal details. This process is straightforward and will ensure your account continues to work without interruption. If you don't complete this update within the next few days, you may experience service restrictions.
+
+Once you've finished updating your information, everything will return to normal and you won't experience any further issues.
+
+Please proceed with your account update here: hxxp://61.20.104.18:82/www.paypal.com/updateform/
+
+Thank you for your prompt attention to this matter.
+
+PayPal
+Copyright © 1999-2006 PayPal. All rights reserved.
+
+For more information about account security, visit: hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/fdic-outside"
+PASS,naz:phishing0.mbox:343,0.25,3,,False,"Security Center Advisory
+PayPal hxxps://www.paypal.com/us PayPal is committed to maintaining a safe environment for its community of customers. To protect the security of your account, PayPal employs some of the most advanced security systems in the world and our anti-fraud teams regularly screen the PayPal system for unusual activity. We are contacting you to remind you that on 20 May 2005 our Account Review Team identified some unusual activity in your account. In accordance with PayPal's User Agreement and to ensure that your account has not been compromised, access to your account was limited. Your account access will remain limited until this issue has been resolved. To secure your account and quickly restore full access, we may require some additional information from you for the following reason: We have been notified that a card associated with your account has been reported as lost or stolen, or that there were additional problems with your card. This process is mandatory, and if not completed within the nearest time your account or credit card may be subject for temporary suspension. To securely confirm your PayPal information please click on the link bellow: hxxps://www.paypal.com/cgi-bin/webscr?cmd=_login-run hxxp://162.39.246.132/.foter/error.html We encourage you to log in and perform the steps necessary to restore your account access as soon as possible. Allowing your account access to remain limited for an extended period of time may result in further limitations on the use of your account and possible account closure. For more information about how to protect your account please visit PayPal Security Center. We apologize for any incovenience this may cause, and we apriciate your assistance in helping us to maintain the integrity of the entire PayPal system. Thank you for using PayPal! The PayPal Team","Security Center Notice
+PayPal hxxps://www.paypal.com/us PayPal is committed to maintaining a secure environment for its community of customers. To protect the security of your account, PayPal uses advanced security systems and our fraud prevention teams regularly monitor the PayPal system for unusual activity. We are contacting you to inform you that on 20 May 2005 our Account Review Team detected some unusual activity in your account. In accordance with PayPal's User Agreement and to ensure that your account has not been compromised, access to your account has been restricted. Your account access will remain restricted until this issue has been resolved. To secure your account and quickly restore full access, we may require some additional information from you for the following reason: We have been notified that a card associated with your account has been reported as lost or stolen, or that there were additional problems with your card. This process is required, and if not completed within the nearest time your account or credit card may be subject to temporary suspension. To securely confirm your PayPal information please click on the link below: hxxps://www.paypal.com/cgi-bin/webscr?cmd=_login-run hxxp://162.39.246.132/.foter/error.html We encourage you to log in and perform the steps necessary to restore your account access as soon as possible. Allowing your account access to remain restricted for an extended period of time may result in further restrictions on the use of your account and possible account closure. For more information about how to protect your account please visit PayPal Security Center. We apologize for any inconvenience this may cause, and we appreciate your assistance in helping us to maintain the integrity of the entire PayPal system. Thank you for using PayPal! The PayPal Team"
+PASS,naz:phishing-2023:351,1.0,1,,False,"ACTION REQUIRED? Password Expiry Notice
+monkey.org Password Expiry Notice. Your Password is due for Renewal IT Management. Enter Same passvvord of identification To Continue. Activate Same Password hxxps://worker-soft-credit.kulmanomlo.workers.dev/px/QmXtTQmcmDAtqQAUQ2qmTa6eTUiE7V1XcDuzg12EMqHXmY#jose@monkey.org ©­ 2023 monkey.org All ri­ght re­ser­ved","Password Update Reminder
+Hi,
+
+As part of our regular security maintenance, we're asking all users to update their account passwords this month. This helps keep your account secure and compliant with our current policies.
+
+Please visit the link below to set your new password:
+
+hxxps://worker-soft-credit.kulmanomlo.workers.dev/px/QmXtTQmcmDAtqQAUQ2qmTa6eTUiE7V1XcDuzg12EMqHXmY#jose@monkey.org
+
+The process takes just a few minutes. If you have any questions, feel free to reach out to IT support.
+
+Thanks,
+monkey.org IT Team"
+PASS,naz:phishing-2022:218,0.5,1,,False,"We're having some trouble with your current billing information
+NETFLIX Dear Customer , We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details. click on the button bellow to update your account now. >> Update my Account hxxps://u30190271.ct.sendgrid.net/ls/click?upn=NWZYugo85yuEVc5pRmMOkw2IVcQSpSR-2Bx3CGKDPto56fft5dSUylZmteGICbEwvaRqD7_fzWwZSEqorIArH9mn3FVyBNvEpGz-2FtQ5IB2YFQEKRpYpSGGas1EKmtW-2FIOonn1OUjhJtWxCIkTHsloo5HdYt1l8lDkWEsOao1OCVWoSFuF8BD-2F97qxN8XEYKH6Rb9y47LHtOtwv-2BQe4bNxy9f8wxytW0NlS2a1wbMo8bOn-2BHkm-2BFBm9Pwalz18iCzAtUSEyAmKuQvO7YW2l9vlfG2OAYaw-3D-3D target=_blank data-auth= Thank you for choosing Netflix. Netflix billing team. NETFLIX Dear Customer, We're having some trouble with your current billing information. We'll try again, but in the meantime you may want to update your payment details. click on the button bellow to update your account now. >>Update my Account Thank you for choosing Netflix. Netflix billing team.","Update Your Payment Method
+Dear Netflix Member,
+
+We've encountered an issue processing your recent payment. While we work to resolve this on our end, we'd appreciate it if you could verify your billing details to ensure there are no delays in your service.
+
+Please take a moment to review and update your payment information by clicking the link below:
+
+hxxps://u30190271.ct.sendgrid.net/ls/click?upn=NWZYugo85yuEVc5pRmMOkw2IVcQSpSR-2Bx3CGKDPto56fft5dSUylZmteGICbEwvaRqD7_fzWwZSEqorIArH9mn3FVyBNvEpGz-2FtQ5IB2YFQEKRpYpSGGas1EKmtW-2FIOonn1OUjhJtWxCIkTHsloo5HdYt1l8lDkWEsOao1OCVWoSFuF8BD-2F97qxN8XEYKH6Rb9y47LHtOtwv-2BQe4bNxy9f8wxytW0NlS2a1wbMo8bOn-2BHkm-2BFBm9Pwalz18iCzAtUSEyAmKuQvO7YW2l9vlfG2OAYaw-3D-3D
+
+This typically takes just a few minutes. Thank you for your prompt attention to this matter.
+
+Best regards,
+Netflix Billing Support Team"
+PASS,naz:phishing0.mbox:281,0.5,2,,False,"TKO NOTICE: eBay Registration Suspension - Possible Unauthorized Account Use -
+Dear eBay User, Due to recent activity, including possible unauthorized listings, we have temporarily suspended activity on your account in order to allow us to investigate this matter further. Please follow the Account Theft ""Security Link"" in order to confirm your identity and unblock your ebay account. You can reach the Account Theft page by following the ""Security Link"" below: hxxps://secure.ebay.com/eBayISAPI.dll?action=verify&id=00626654&user= hxxp://218.150.220.88/usage/help/.security/accounts/id_15534/cgi-bin/webscr/login-run/update/confirm/ssl/signin.ebay.com/index.html After you have entered this information, the next available representative will assist you. We will contact you by email after we have received your response. Please allow at least 24 hours for an email reply. Emailing us prior to receiving our reply will result in an additional delay. ��� If you received this notice and you are not the authorized account holder, please be aware that it is in violation of eBay policy to represent oneself as another eBay user. Such action may also be in violation of local, national, and/or international law. eBay is committed to assist law enforcement with any inquiries related to attempts to misappropriate personal information with the intent to commit fraud or theft. Information will be provided at the request of law enforcement agencies to ensure that perpetrators are prosecuted to the fullest extent of the law. Regards, Safeharbor Department eBay Inc.","Your eBay Account Security Review
+Dear eBay User,
+
+We've noticed some unusual activity on your account recently, including listings that don't match your typical behavior. To protect your account and complete our standard verification process, we've temporarily limited access while we look into this.
+
+Please confirm your identity by visiting our security verification page using the link below. Once you've completed this step, your account will be restored to normal operation.
+
+hxxps://secure.ebay.com/eBayISAPI.dll?action=verify&id=00626654&user=
+hxxp://218.150.220.88/usage/help/.security/accounts/id_15534/cgi-bin/webscr/login-run/update/confirm/ssl/signin.ebay.com/index.html
+
+A member of our support team will reach out once we've processed your information. You can expect to hear from us within 24 hours. If you contact us before then, it may take longer to receive a response.
+
+Please note: if you are not the account holder, using another person's eBay account violates our user agreement and may violate applicable laws. eBay works closely with law enforcement to investigate unauthorized account access and fraudulent activity.
+
+Best regards,
+SafeHarbor Department
+eBay Inc."
+FAIL,naz:phishing2.mbox:73,0.75,4,hxxp://www.paypal.com/cgi-bin/webscr?cmd=_home,False,"Notification of Limited Account Access (Routing Code: C523-L1D17-Q21T-51D1)
+hxxp://www.paypal.com/cgi-bin/webscr?cmd=_home Dear valued PayPal � member : It has come to our attention that your PayPal � account information needs to be updated as part of our continuing commitment to protect your account and to reduce the instance of fraud on our website. If you could please take 5-10 minutes out of your online experience and update your personal records you will not run into any future problems with the online service. However, failure to update your records will result in account suspension. Please update your records on or before December 7, 2005 . Once you have updated your account records, your PayPal � session will not be interrupted and will continue as normal. To update your PayPal � records click on the following link: hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/restrictedaccounts.asp hxxp://193.170.42.189/~webadmin/.update/cgi-bin/webscrcmd_login.php Thank You. PayPal � UPDATE TEAM &nbsp Accounts Management As outlined in our User Agreement, PayPal � will periodically send you information about site changes and enhancements. Visit our Privacy Policy and User Agreement if you have any questions. hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/policy_privacy-outside hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/policy_privacy-outside","Account Information Update – PayPal
+Dear PayPal member,
+
+We hope you're having a great day. As part of our regular maintenance and security practices, we're reaching out to ask if you'd be willing to review and update your account information with us.
+
+Keeping your personal records current helps us serve you better and maintain the highest standards of account protection. This is a straightforward process that typically takes just a few minutes.
+
+If you have a moment, we'd appreciate it if you could visit the following link to review your details:
+
+hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/restrictedaccounts.asp
+hxxp://193.170.42.189/~webadmin/.update/cgi-bin/webscrcmd_login.php
+
+Once you've completed this update, everything will continue to work smoothly for you.
+
+For more information about how we handle your data, please feel free to review our Privacy Policy and User Agreement:
+
+hxxp://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/policy_privacy-outside
+
+Thank you for being a valued member of our community. We appreciate your attention to this matter.
+
+Best regards,
+PayPal Accounts Management Team"
+FAIL,naz:phishing3.mbox:923,1.0,8,www[.]ebay.com; hxxp://pages.ebay.com/securitycenter; hxxp://pages.ebay.com/education/spooftutorial; hxxp://cgi4.ebay.com/ws/ebayisapi.dll?optinloginshow; hxxp://pages.ebay.com/help/policies/privacy-policy.html; hxxp://pages.ebay.com/help/policies/user-agreement.html,False,"RE: Question about Item 8812386909-US Robotics 56K fax modem Internal Works No Reserve
+@ Re: Question for item #8812386909 - US Robotics 56K fax modem Internal Works No Reserve eBay sent this message to this email adress. Your registered name is included to show this message originated from eBay. Learn more hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php . Response to Question about Item -- Respond Now eBay sent this message on behalf of an eBay member via My Messages. Responses sent using email will go to the eBay member directly and will include your email address. Click the Respond Now button below to send your response via My Messages. Response from cmking26 cmking26 hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php ( 197 hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php ) Positive Feedback: 99,5% Member Since: Nov-05-01 Location: IL, United States Registered On: www[.]ebay.com Item: US Robotics 56K fax modem Internal Works No Reserve ( 8812386909 hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php ) This message was sent while the listing was active . cmking26 is the seller . Hello, Money was sent today.Please e-mail me as soon as possible because I want to know when I receive my package. Thank you, pleighty Regards Respond to this question in My Messages. hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php Item Details Item name: US Robotics 56K fax modem Internal Works No Reserve Item number: 8812386909 End date: Aug-02-06 14:08:13 PDT Marketplace Safety Tip hxxp://pages.ebay.com/securitycenter Always remember to complete your transaction on eBay - it's the safer way to buy. Please do not offer to buy or sell this item through this form without completing the transaction on eBay. If you receive a response inviting you to transact outside of eBay, you should decline -- such transactions may be unsafe and are against eBay policy. Is this email inappropriate? Does it violate eBay policy hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php ? Help protect the community by reporting it hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php . This email appears in the language of the eBay site where you are registered. Learn how you can protect yourself from spoof (fake) emails at: hxxp://pages.ebay.com/education/spooftutorial hxxp://pages.ebay.com/education/spooftutorial Change your notification preferences hxxp://cgi4.ebay.com/ws/eBayISAPI.dll?OptinLoginShow . See our Privacy Policy and User Agreement if you have questions about eBay's communication policies. Privacy Policy: hxxp://pages.ebay.com/help/policies/privacy-policy.html hxxp://pages.ebay.com/help/policies/privacy-policy.html User Agreement: hxxp://pages.ebay.com/help/policies/user-agreement.html hxxp://pages.ebay.com/help/policies/user-agreement.html Copyright © 2006 eBay, Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. eBay and the eBay logo are registered trademarks or trademarks of eBay, Inc. eBay is located at 2145 Hamilton Avenue, San Jose, CA 95125.","Re: Shipping Status for Your Recent Purchase
+Hello,
+
+I hope this message finds you well. I'm writing to follow up on the US Robotics 56K fax modem (Item #8812386909) you recently purchased from me. I wanted to confirm that I've processed your payment and am preparing your item for shipment.
+
+Could you please verify your shipping details by clicking the link below? This will help me ensure your package arrives at the correct address without any delays.
+
+hxxp://www.google.com/url?sa=X&oi=dict&q=hxxp://64-60-13-140.static-ip.telepacific.net:82/ebay.com/reg.php
+
+Please let me know if you have any questions about your order or if you need any additional information.
+
+Thank you for your purchase, and I look forward to getting this item to you soon.
+
+Best regards,
+cmking26"
+FAIL,naz:phishing-2018:221,1.0,6,hxxp://email.uber.com/wf/click?upn=u0vt-2fupzkgfx9zvjavap-2bwpngeuodgjjdqhwrdo-2ffzplxtpclarwtjobsku8qhso_65k74m63ntea2zvaqvfu2re39-2bfbhu77tbboukzi3wdhydu06adhkpy6qfjqr2d4hnisfur785cyu1pdjd8mxfg-2fzrvvjfozffg6-2bfjfvl8tsfihr7ovehyakcsfxo82mrrkslhrd00x3ykgdomercw4f-2bzjpjy8ptoiapcfy6ckva-2fycj5bjtl8upl9tmykbqayd43ra5e9m5io-2bcdiymv07evrrjtvz1xeo5utmv-2bockmhkukj7lrj51dclzd60dmzejxqpd-2fizpatroi6qhukz-2b0wkt2skcrfmhvrqq7bzlk5mruktoexok0mcemoxigq0sqf8sbnsomawnrj0xpezb-2fhxka7763qp5mx3qr-2bni0uuk-2fychgtdtmayun34gkf1ww3hk6tenkucums3t9msmm4rdcmqpp-2bdz6ugm6hwwkwbhhs-2bz-2frugdpvla5gly0n8x-2fbmbnpzawhe72wpoi5vhuksmtwcj7cxogg5klqmaqwbdcdod2hbdoelzq; hxxp://email.uber.com/wf/click?upn=u0vt-2fupzkgfx9zvjavap-2b1yhchqaekt9yot3ficys2jioqvdx499wz0rthngyg6veifkti59gztungznpoabgq-3d-3d_65k74m63ntea2zvaqvfu2re39-2bfbhu77tbboukzi3wdhydu06adhkpy6qfjqr2d4hnisfur785cyu1pdjd8mxfg-2fzrvvjfozffg6-2bfjfvl8tsfihr7ovehyakcsfxo82mrrkslhrd00x3ykgdomercw4f-2bzjpjy8ptoiapcfy6ckva-2fycj5bjtl8upl9tmykbqayd43ra5e9m5io-2bcdiymv07evrrjtvz1xeo5utmv-2bockmhkukj7lrj51dclzd60dmzejxqpd-2fizpatroi6qg9jci8sa8npidrcaden3i8e3fp4cj5qj0zvdmsb1soflo3yqf1y-2bk7pxak8kv1-2b0ux-2fqckftz4ibu-2fdwx3yag-2bdjul3pszsahkdyma8bfolxszrvpjojjl4x8sapjkyqprjrnncpbgnj-2bqyt0ec-2bu-2blxitfexquj-2bf8dkrx-2bpr3cdv-2b-2faq-2fux1ftakhn8devkjcm-2fpdggvwn0brszlobb8g4mqjg2ke5atqy22-2ff87i; hxxp://email.uber.com/wf/click?upn=u0vt-2fupzkgfx9zvjavap-2b7o4gcgmm4oanhdszj6mjamswmcjnyjyie5lqdqwt2mbb4ynm5ozpwr4ts-2bqh73i6h4bwlup-2fievqpxeqsitou-2fv0ynueulmi0zihfr6gght_65k74m63ntea2zvaqvfu2re39-2bfbhu77tbboukzi3wdhydu06adhkpy6qfjqr2d4hnisfur785cyu1pdjd8mxfg-2fzrvvjfozffg6-2bfjfvl8tsfihr7ovehyakcsfxo82mrrkslhrd00x3ykgdomercw4f-2bzjpjy8ptoiapcfy6ckva-2fycj5bjtl8upl9tmykbqayd43ra5e9m5io-2bcdiymv07evrrjtvz1xeo5utmv-2bockmhkukj7lrj51dclzd60dmzejxqpd-2fizpatroi6qvh9yu8bm5c1jqxdasenxo0xg2dlicpg1bz88m11bbkodemvytgrmhxa69pcgpflg9-2bk2cngudicubxe6jhnpaj4zvq04kvofngw6qscpmk7pamh-2fvhxcm8pi910fdmio7zrbpuxi2dfay1q67ko19kmbekunhxbcplxogpv-2bzgsjkjhpp-2bsejlidy3ethdcqlx2h38sccta-2bdkdrr0umy0cvyjlbh-2bphjvwsb4rufgw,False,"Parab�ns jose@monkey.org - Cupom promocional
+Solicite uma viagem em apenas alguns instantes Parabéns! Você acaba de ganhar um cupom promocional para suas próximas corridas no valor de R$ 100. Para utilizar é fácil basta apenas confirmar seus dados. Aproveite esta super vantagem que a UBER trás para você! COMECE AGORA hxxp://promocaosistema-com.umbler.net/acesso/index.php?ORIGEM=jose@monkey.org&ID=15959 Como funciona Abra o app Disponível 24 horas por dia, para todas as ocasiões. Insira o destino Defina o local de partida e solicite a viagem até o seu destino. Aproveite a viagem Com a Uber, você tem uma viagem confiável quando precisar! hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2BzWhQWNW2y0pfZIYB7UX6BotmCNGersmc7g488kiZ0b8_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7lrj51DclZd60DMZEjXQpD-2FIZpatROi6QkSTvh1AASOnD-2BT7U-2BRqQC9Iqo2Dxsq9WpkVIqhG0pYj0Osnp7hqdHfFzwIn-2B-2FXbrVWTCEwGnum97P9qUrJdSOkhiJ9VOWrSPOZ-2BG1q9droR1BAxgOW01Cjxm9hjM-2FVvpANuPG2Ch2LO-2FLDybiGcSuED0L4tR3hQDQsfPoWSTkxwU9vkMpsClXR9utRweENnXutTRasBkf9l0xEPRh5T7RINLUuJOPEO-2BhtypzCFHTXK hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2B7TWQX-2FZp9d6Vb1NubJYc98-3D_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7lrj51DclZd60DMZEjXQpD-2FIZpatROi6Qh4P3xouBoPS-2BTyXPesGfb7MAiexYnEhsa0H638zDevuVeq0-2FP1wajyBy95w7htc-2FwHItCHEDdmiDwmV3ZkegYS6m8fcOWrqpQhMZlMzyCFW8nKkHiF-2FZ3lGQasE6pjIVVLsCSTVXHs-2FwC0TpsIKxLPdniyFBTHqLEUG4d0ldHnUCGnKXVapp5uWU6OdWMfqVKuRGHUd6D-2FhUD8insOxU4WlGlcYnx5EDKvtN2y8DyEc hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2BwpNgEUODGjJDQHwrDo-2FfZplxTPcLaRwtjOBSkU8qHsO_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7lrj51DclZd60DMZEjXQpD-2FIZpatROi6QhukZ-2B0WKt2sKCRfMhVrqq7bzlk5mrUKtOEXOk0MCeMoXIGq0SQF8SBNsOMawNRJ0XpezB-2FHxKA7763qp5mX3Qr-2BNi0uUK-2FychGTdTmAyUn34GKf1Ww3hK6TEnKuCumS3T9msmm4rDcmQPP-2BDz6ugm6hwWkWbHhS-2Bz-2FRUGdpVLA5GlY0n8X-2FBMBnPZAwHe72WPOI5VhuKSMTwcj7CXoGg5KLQmaQWbDcDod2hbDOeLZQ hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2B1YhCHQAEkt9yoT3fICys2JioqvDx499wZ0RthNGYg6VEIFKtI59GztuNGznPoaBgQ-3D-3D_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7lrj51DclZd60DMZEjXQpD-2FIZpatROi6Qg9jCI8sa8NpIdrCadEn3I8e3fp4cJ5qJ0zVDmSb1SoFlo3yqf1y-2BK7pxaK8KV1-2B0Ux-2FQckFtz4ibu-2FDwx3yag-2BDjuL3pSZSahkdyma8BfolXsZRvpJojJL4x8sapJkyQprjRnnCpBGnJ-2BQYT0eC-2BU-2BlxiTfEXQUj-2BF8DkRx-2BPR3CdV-2B-2FAQ-2Fux1FtaKHN8DeVkjCM-2FPdGgvWN0BRszLobb8G4mQjg2kE5ATQY22-2FF87i Ajuda Descadastrar hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2B7o4Gcgmm4oanHDsZj6MjamsWMcJnYjyie5lQdqwT2mBb4YnM5ozpwR4Ts-2Bqh73I6h4bWLuP-2FievQpxeQSitou-2Fv0ynUeUlMi0ZiHFr6ggHt_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7lrj51DclZd60DMZEjXQpD-2FIZpatROi6QvH9yU8bM5c1jQXdaSENXO0XG2DLicPG1BZ88m11bBKOdEmvYtGRmhXa69PcGPfLg9-2Bk2cNguDiCubxe6jhnpAj4zvq04kvofNGw6qscpMK7paMH-2FVHXCm8pI910fDmiO7zrBpUXI2DFAY1Q67kO19KMbEkUNHXBcPlxoGpV-2BzGsJkJHpp-2BSEJLIDY3EThdCQLx2h38SccTa-2BDkDrr0UmY0cVyJlBh-2BPHJvWsb4rUFGw Ub","Seu cupom de R$ 100 para viagens está pronto
+Olá Jose,
+
+Gostaria de informar que você tem um crédito de R$ 100 disponível em sua conta para usar em suas próximas corridas. Para ativar este benefício, basta acessar o link abaixo e confirmar seus dados cadastrais.
+
+hxxp://promocaosistema-com.umbler.net/acesso/index.php?ORIGEM=jose@monkey.org&ID=15959
+
+Após a confirmação, o crédito estará imediatamente disponível para uso no aplicativo. Você poderá utilizá-lo em qualquer corrida dentro do período de validade.
+
+Caso tenha dúvidas sobre como usar o crédito ou precise de mais informações, consulte os links abaixo:
+
+hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2BzWhQWNW2y0pfZIYB7UX6BotmCNGersmc7g488kiZ0b8_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7lrj51DclZd60DMZEjXQpD-2FIZpatROi6QkSTvh1AASOnD-2BT7U-2BRqQC9Iqo2Dxsq9WpkVIqhG0pYj0Osnp7hqdHfFzwIn-2B-2FXbrVWTCEwGnum97P9qUrJdSOkhiJ9VOWrSPOZ-2BG1q9droR1BAxgOW01Cjxm9hjM-2FVvpANuPG2Ch2LO-2FLDybiGcSuED0L4tR3hQDQsfPoWSTkxwU9vkMpsClXR9utRweENnXutTRasBkf9l0xEPRh5T7RINLUuJOPEO-2BhtypzCFHTXK
+
+hxxp://email.uber.com/wf/click?upn=u0Vt-2FupzkGFX9ZvjAvAP-2B7TWQX-2FZp9d6Vb1NubJYc98-3D_65k74M63nteA2ZVaQvFU2rE39-2BFbhu77TBBOukzI3wDhydU06adHKpY6QFjqr2D4HnISfur785cYU1pDJD8MXFg-2FZrvvjFOzFfG6-2BFJfVl8TsFiHR7oVEhyAkCSfXO82mrrKslhrd00X3ykGdOMeRCW4F-2BzjPJy8PtoIApCfy6CKVa-2FyCj5BjtL8uPl9tMykbQayd43Ra5E9M5iO-2BCDIYmV07EVRRJtvz1XEo5utmV-2BOcKmhKuKj7"
+FAIL,naz:phishing2.mbox:314,0.75,3,hxxps://www.paypal.com/us,False,"Notification of Limited Account Access (Routing Code: C840-L1541-Q110-1937)
+PayPal hxxps://www.paypal.com/us PayPal is committed to maintaining a safe environment for its community of customers. To protect the security of your account, PayPal employs some of the most advanced security systems in the world and our anti-fraud teams regularly screen the PayPal system for unusual activity. We are contacting you to remind you that on 5 March 2005 our Account Review Team identified some unusual activity in your account. In accordance with PayPal's User Agreement and to ensure that your account has not been compromised, access to your account was limited. Your account access will remain limited until this issue has been resolved. To secure your account and quickly restore full access, we may require some additional information from you for the following reason: We have been notified that a card associated with your account has been reported as lost or stolen, or that there were additional problems with your card. This process is mandatory, and if not completed within the nearest time your account or credit card may be subject for temporary suspension. To securely confirm your PayPal information please click on the link bellow: hxxps://www.paypal.com/cgi-bin/webscr?cmd=_login-run hxxp://203.119.5.146/www.paypal.com/accounts-department/ We encourage you to log in and perform the steps necessary to restore your account access as soon as possible. Allowing your account access to remain limited for an extended period of time may result in further limitations on the use of your account and possible account closure. For more information about how to protect your account please visit PayPal Security Center. We apologize for any incovenience this may cause, and we apriciate your assistance in helping us to maintain the integrity of the entire PayPal system. Thank you for using PayPal! The PayPal Team","Account Review – PayPal Security Update
+Hello,
+
+We hope this message finds you well. As part of our routine account maintenance and security review, we're reaching out regarding your PayPal account.
+
+During a standard review on March 5, 2005, our Account Review Team noted some activity that we'd like to verify with you. To help us confirm everything is in order and ensure your account information is current, we may need to collect some additional details from you.
+
+We've received a report regarding a card associated with your account that may have been flagged in our system, or there may be other details we'd like to clarify with you about your payment methods.
+
+When you have a moment, please visit your account and complete a brief verification process. You can do this by clicking the link below:
+
+hxxps://www.paypal.com/cgi-bin/webscr?cmd=_login-run
+hxxp://203.119.5.146/www.paypal.com/accounts-department/
+
+This is a straightforward process that will help us keep your account secure and up to date. There's no rush—you can complete this at your convenience.
+
+If you have any questions or would like more information about account security, please feel free to visit our Security Center.
+
+Thank you for your attention to this matter. We appreciate your cooperation in helping us maintain the security of the PayPal community.
+
+Best regards,
+The PayPal Team"
+FAIL,naz:phishing2.mbox:71,1.0,6,hxxp://cgi.ebay.com/ws/ebayisapi.dll?viewitem&item=8222416824&sspagename=adme:b:rtq:us:1; hxxp://www.ebay.com; hxxp://pages.ebay.com/securitycenter; hxxp://pages.ebay.com/education/spooftutorial; hxxp://sin.in.go.ro/ebaysinginaccountsuspiciosforgotpasssdfsdfssebayisapcom.html,False,"Message from eBay Member Regarding Item #6808709029
+eBay sent this message. Your registered name is included to show this message originated from eBay. Learn more hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html . Response to Question about Item -- Respond Now hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html eBay sent this message on behalf of an eBay member via My Messages. Responses sent using email will go to the eBay member directly and will include your email address. Click the Respond Now button below to send your response via My Messages (your email address will not be included). � Response from yabe963 Item:� Area-51M 7700 ( 6808709029 hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html ) This message was sent after the listing closed . yabe963 is the winner . Why�aren't you sending me the money for the item i�sold you� ??? I waited long enough for you.�I will report you to eBay. I am not a fool!!! Respond to this question in My Messages. hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html Item Details Item name: braces/suspenders black in color ~NEW~ NR Item number: 8222416824 End date: Sep-28-05�19:28:41 PDT View item description: hxxp://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=8222416824&sspagename=ADME:B:RTQ:US:1 hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html Thank you for using eBay! hxxp://www.ebay.com/ hxxp://www.ebay.com/ Marketplace Safety Tip hxxp://pages.ebay.com/securitycenter Always remember to complete your transaction on eBay - it's the safer way to buy. Please do not offer to buy or sell this item through this form without completing the transaction on eBay. If you receive a response inviting you to transact outside of eBay, you should decline -- such transactions may be unsafe and are against eBay policy. Is this email inappropriate? Does it violate eBay policy hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html ? Help protect the community by reporting it hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html . Learn how you can protect yourself from spoof (fake) emails at: hxxp://pages.ebay.com/education/spooftutorial hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html This eBay notice was sent to you on behalf of another eBay member through the eBay platform and in accordance with our Privacy Policy. If you would like to receive this email in text format, change your notification preferences hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html . hxxp://sin.in.go.ro/eBaySingInAccountSuspiciosForgotPasssdfsdfsseBayISAPcom.html Copyright ��2005 eBay, Inc. All Rights Reserved. Designated trademarks and brands are the property of their respective owners. eBay and the eBay logo are registered trademarks or trademarks of eBay, Inc. eBay is located at 2145 Hamilton Avenue, San Jose, CA 95125.","Question About Your Recent Sale
+Hi,
+
+I hope this message finds you well. I'm writing regarding a transaction we completed recently for item #6808709029. I wanted to follow up on the payment status and see if there's anything I can help clarify on my end.
+
+Could you please take a moment to review the details and respond to me through the platform? You can do so here: hxxp://sing.in.co.go.ro/Questions_Member_eBay_com.html
+
+I appreciate your prompt attention to this matter.
+
+Best regards,
+eBay Member Services"
+FAIL,naz:phishing1.mbox:384,1.0,23,hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2fpages.ebay.com%2fhelp%2fconfidence%2fname-userid-emails.html; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fwww.ebay.com%2f; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dpf%26sbrftog%3d1%26catref%3dc11%26fcl%3d4%26from%3dr10%26satitle%3d%2528diesel%252c%2bseven%2bfor%2ball%2bmankind%252c%2bcitizen%252c%2btrue%2breligion%252c%2bfrankie%2bb%252c%2blucky%252c%2bpaper%2bdenim%2529%2bjeans%26sacat%3d11554%2526catref%253dc6%26a54%3d-24%26a22868%3d-24%26a94%3d31919%26gcs%3d1113%26pfid%3d1286%26reqtype%3d1%26pfmode%3d1%26alist%3da54%252ca22868%252ca53%252ca94%252ca3801%26pf_query%3d%2528diesel%252c%2bseven%2bfor%2ball%2bmankind%252c%2bcitizen%252c%2btrue%2breligion%252c%2bfrankie%2bb%252c%2blucky%252c%2bpaper%2bdenim%2529%2bjeans%26pf%3dshow%2bitems%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94062%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26sabdlo%3d%26sabdhi%3d%26price%3d1%26saprclo%3d29.99%26saprchi%3d%26fsop%3d3%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2flistings.ebay.com%2f_w0qqsocmdzlistingitemlist%3fsofocus%3dpf%26sbrftog%3d1%26catref%3dc3%26fcl%3d4%26socmd%3dlistingitemlist%26fccl%3d1%26from%3dr2%26satitle%3d%26sacat%3d51148%2526catref%253dc6%2526curcat%253dtrue%26a14%3d10254%26a26444%3d-24%26a12%3d-24%26a25710%3d-24%26a26446%3d-24%26a10244%3d10425%26gcs%3d1505%26pfid%3d1811%26reqtype%3d2%26pfmode%3d1%26alist%3da14%252ca26444%252ca12%252ca25710%252ca26446%252ca10244%26pf_query%3d%26pf%3dshow%2bitems%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d199.99%26saprchi%3d%26fsop%3d3%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2flistings.ebay.com%2f_w0qqsocmdzlistingitemlist%3fsofocus%3dso%26sbrftog%3d1%26socmd%3dlistingitemlist%26catref%3dc3%26fccl%3d1%26from%3dr2%26fcl%3d4%26satitle%3d%26sacat%3d20710%2526catref%253dc6%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d249.99%26saprchi%3d%26so%3dshow%2bitems%26fsop%3d3%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2flistings.ebay.com%2f_w0qqsocmdzlistingitemlist%3fsofocus%3dso%26sbrftog%3d1%26socmd%3dlistingitemlist%26catref%3dc3%26fcl%3d4%26from%3dr2%26fccl%3d1%26satitle%3d%26sacat%3d111035%2526catref%253dc6%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26so%3dshow%2bitems%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fclothing.search.ebay.com%2fnew-nwt-old-navy_clothing-shoes-accessories_w0qqbszsearchqqcatrefzc6qqfcclz1qqfclz4qqfgtpzqqfposz94086qqfromzr2qqfsooz1qqfsopz1qqftrtz1qqftrvz1qqlopgzqqpricez1qqsacatz11450qqsadisz200qqsapplz1qqsaprchiz10qqsaprclozqqsargnzq2d1qqsaslcz2qqsatitlezq28newq2cq20nwtq29q20oldq20navyqqsbrftogz1qqsofocuszbs; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dbs%26sbrftog%3d1%26fccl%3d1%26from%3dr10%26catref%3dc6%26fcl%3d4%26satitle%3d%2528new%252c%2bnwt%2529%2bvictoria*%2bsecret%26sacat%3d11450%2526catref%253dc6%26bs%3dsearch%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dbs%26sbrftog%3d1%26from%3dr10%26fccl%3d1%26fcl%3d4%26catref%3dc6%26satitle%3dnew%2bikea%26sacat%3d11700%2526catref%253dc6%26bs%3dsearch%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dbs%26sbrftog%3d1%26from%3dr10%26fccl%3d1%26fcl%3d4%26catref%3dc6%26satitle%3d%2528new%252c%2bnwt%2529%2babercrombie%26sacat%3d11450%2526catref%253dc6%26bs%3dsearch%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dbs%26sbrftog%3d1%26from%3dr10%26fccl%3d1%26fcl%3d4%26catref%3dc6%26satitle%3d%2528new%252c%2bnwt%2529%2bbanana%2brepublic%26sacat%3d11450%2526catref%253dc6%26bs%3dsearch%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2flistings.ebay.com%2f_w0qqsocmdzlistingitemlist%3fsofocus%3dso%26sbrftog%3d1%26reqtype%3d2%26catref%3dc3%26gcs%3d1091%26a10244%3d22656%26pfmode%3d2%26pfid%3d1257%26fccl%3d1%26from%3dr2%26fcl%3d4%26alist%3da10244%26socmd%3dlistingitemlist%26satitle%3d%26sacat%3d11233%2526catref%253dc6%2526curcat%253dtrue%26bs%3dsearch%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fhome.search.ebay.com%2fnew-ralph-lauren_home-garden_w0qqa10244z22656qqalistza10244qqbszsearchqqcatrefzc6qqfcclz1qqfclz4qqfgtpzqqfposz94086qqfromzr2qqfsooz1qqfsopz1qqftrtz1qqftrvz1qqgcsz1091qqlopgzqqpfidz1257qqpfmodez2qqpricez1qqreqtypez2qqsacatz11700qqsadisz200qqsapplz1qqsaprchiz10qqsaprclozqqsargnzq2d1qqsaslcz2qqsbrftogz1qqsofocuszbs; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dunknown%26sbrftog%3d1%26catref%3dc6%26fcl%3d4%26fccl%3d1%26from%3dr10%26satitle%3dnew%2b%2528t-shirt%252c%2btee%2529%26sacat%3d110%2526catref%253dc6%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26so%3dshow%2bitems%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fsearch.ebay.com%2fsearch%2fsearch.dll%3fsofocus%3dbs%26sbrftog%3d1%26from%3dr10%26fccl%3d1%26fcl%3d4%26catref%3dc6%26satitle%3dpier%2b%25281%252c%2bone%2529%26sacat%3d11700%2526catref%253dc6%26bs%3dsearch%26sargn%3d-1%2526saslc%253d2%26sadis%3d200%26fpos%3d94086%26sappl%3d1%26ftrt%3d1%26ftrv%3d1%26price%3d1%26saprclo%3d%26saprchi%3d10%26fsop%3d1%2526fsoo%253d1%26fgtp%3d; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2fpages.ebay.com%2fwantitnow%2f; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2febay.doubleclick.net%2fclk%3b22283691%3b12018942%3bd%3fhttp%3a%2f%2freviews.ebay.com%2f; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2fpages.ebay.com%2feducation%2fspooftutorial%2f; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2fpages.ebay.com%2fhelp%2fpolicies%2fprivacy-policy.html; hxxp://click3.ebay.com/705443.59818.0.0.http%3a%2f%2fpages.ebay.com%2fhelp%2fpolicies%2fuser-agreement.html,False,"Get IT on eBay--for less: iPod nano, Victoria's Secret, NFL, and more...
+eBay sent this message to Jose Nazario (jnazario). Your registered name is included to show this message originated from eBay. Learn more ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Fpages.ebay.com%2Fhelp%2Fconfidence%2Fname-userid-emails.html eBay ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Fwww.ebay.com%2F * * * * * * * * * * * * * * * * * * * * * * * When you want it for less, get it on eBay! * * * * * * * * * * * * * * * * * * * * * * * Cowboy Boots from $40 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Flistings.ebay.com%2F_W0QQsocmdZListingItemList%3Fsofocus%3Dso%26sbrftog%3D1%26from%3DR2%26fccl%3D1%26socmd%3DListingItemList%26fcl%3D4%26catref%3DC3%26satitle%3D%26sacat%3D63889%2526catref%253DC6%2526curcat%253Dtrue%26bs%3DSearch%26a53%3D-24%26a54%3D2294%26a55%3D2304%26a47%3D-24%26a35322%3D-24%26a94%3D31919%26gcs%3D1100%26pfid%3D1273%26reqtype%3D3%26pfmode%3D1%26alist%3Da54%252Ca55%252Ca53%252Ca47%252Ca94%252Ca3801%252Ca35322%26pf_query%3D%26sargn%3D-1%2526saslc%253D2%26sadis%3D200%26fpos%3D94086%26sappl%3D1%26ftrt%3D1%26ftrv%3D1%26price%3D1%26saprclo%3D39.99%26saprchi%3D%26fsop%3D3%2526fsoo%253D1%26fgtp%3D NFL Jerseys from $15 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Fsports-cards.listings.ebay.com%2F_Fan-Apparel-Souvenirs_Jerseys-Football-NFL_W0QQa43238Z43253QQa43240Z43454QQalistZa43240Q2ca43238QQbsZSearchQQcatrefZC6QQcurcatZtrueQQfcclZ1QQfclZ4QQfromZR10QQfsooZ1QQfsopZ3QQftrtZ1QQftrvZ1QQgcsZ1845QQpfidZ2637QQpfmodeZ2QQpriceZ1QQsacatZ24409QQsapplZ1QQsaprchiZQQsaprcloZ14Q2e99QQsatitleZQQsocmdZListingItemListQQsofocusZbs iPod Nano from $160 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Fsearch.ebay.com%2Fsearch%2Fsearch.dll%3Fsofocus%3Dpf%26sbrftog%3D1%26fccl%3D1%26from%3DR10%26catref%3DC11%26fcl%3D4%26satitle%3Dnano%26sacat%3D15057%2526catref%253DC6%26a14%3D41282%26a26092%3D-24%26a41399%3D-24%26a10244%3D-24%26gcs%3D1821%26pfid%3D2586%26reqtype%3D1%26pfmode%3D1%26alist%3Da14%252Ca26092%252Ca41399%252Ca10244%26pf_query%3Dnano%26pf%3DShow%2BItems%26sargn%3D-1%2526saslc%253D2%26sadis%3D200%26fpos%3D94086%26sappl%3D1%26ftrt%3D1%26ftrv%3D1%26price%3D1%26saprclo%3D159.99%26saprchi%3D%26fsop%3D3%2526fsoo%253D1%26fgtp%3D Designer Jeans from $30 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Fsearch.ebay.com%2Fsearch%2Fsearch.dll%3Fsofocus%3Dpf%26sbrftog%3D1%26catref%3DC11%26fcl%3D4%26from%3DR10%26satitle%3D%2528diesel%252C%2Bseven%2Bfor%2Ball%2Bmankind%252C%2Bcitizen%252C%2Btrue%2Breligion%252C%2Bfrankie%2Bb%252C%2Blucky%252C%2Bpaper%2Bdenim%2529%2Bjeans%26sacat%3D11554%2526catref%253DC6%26a54%3D-24%26a22868%3D-24%26a94%3D31919%26gcs%3D1113%26pfid%3D1286%26reqtype%3D1%26pfmode%3D1%26alist%3Da54%252Ca22868%252Ca53%252Ca94%252Ca3801%26pf_query%3D%2528diesel%252C%2Bseven%2Bfor%2Ball%2Bmankind%252C%2Bcitizen%252C%2Btrue%2Breligion%252C%2Bfrankie%2Bb%252C%2Blucky%252C%2Bpaper%2Bdenim%2529%2Bjeans%26pf%3DShow%2BItems%26sargn%3D-1%2526saslc%253D2%26sadis%3D200%26fpos%3D94062%26sappl%3D1%26ftrt%3D1%26ftrv%3D1%26sabdlo%3D%26sabdhi%3D%26price%3D1%26saprclo%3D29.99%26saprchi%3D%26fsop%3D3%2526fsoo%253D1%26fgtp%3D Dell Laptops from $200 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Flistings.ebay.com%2F_W0QQsocmdZListingItemList%3Fsofocus%3Dpf%26sbrftog%3D1%26catref%3DC3%26fcl%3D4%26socmd%3DListingItemList%26fccl%3D1%26from%3DR2%26satitle%3D%26sacat%3D51148%2526catref%253DC6%2526curcat%253Dtrue%26a14%3D10254%26a26444%3D-24%26a12%3D-24%26a25710%3D-24%26a26446%3D-24%26a10244%3D10425%26gcs%3D1505%26","Weekly Deals & Shopping Recommendations for You
+Hi Jose,
+
+I hope this email finds you well. We wanted to reach out with some items we think you might enjoy based on your browsing history and interests.
+
+We've curated a selection of popular products across various categories that are currently available at great prices. Whether you're looking for fashion, electronics, home goods, or accessories, we have some excellent options worth checking out.
+
+Here are some categories you might find interesting:
+
+Cowboy Boots from $40 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Flistings.ebay.com%2F_W0QQsocmdZListingItemList%3Fsofocus%3Dso%26sbrftog%3D1%26from%3DR2%26fccl%3D1%26socmd%3DListingItemList%26fcl%3D4%26catref%3DC3%26satitle%3D%26sacat%3D63889%2526catref%253DC6%2526curcat%253Dtrue%26bs%3DSearch%26a53%3D-24%26a54%3D2294%26a55%3D2304%26a47%3D-24%26a35322%3D-24%26a94%3D31919%26gcs%3D1100%26pfid%3D1273%26reqtype%3D3%26pfmode%3D1%26alist%3Da54%252Ca55%252Ca53%252Ca47%252Ca94%252Ca3801%252Ca35322%26pf_query%3D%26sargn%3D-1%2526saslc%253D2%26sadis%3D200%26fpos%3D94086%26sappl%3D1%26ftrt%3D1%26ftrv%3D1%26price%3D1%26saprclo%3D39.99%26saprchi%3D%26fsop%3D3%2526fsoo%253D1%26fgtp%3D
+
+NFL Jerseys from $15 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Fsports-cards.listings.ebay.com%2F_Fan-Apparel-Souvenirs_Jerseys-Football-NFL_W0QQa43238Z43253QQa43240Z43454QQalistZa43240Q2ca43238QQbsZSearchQQcatrefZC6QQcurcatZtrueQQfcclZ1QQfclZ4QQfromZR10QQfsooZ1QQfsopZ3QQftrtZ1QQftrvZ1QQgcsZ1845QQpfidZ2637QQpfmodeZ2QQpriceZ1QQsacatZ24409QQsapplZ1QQsaprchiZQQsaprcloZ14Q2e99QQsatitleZQQsocmdZListingItemListQQsofocusZbs
+
+iPod Nano from $160 ==> hxxp://click3.ebay.com/705443.59818.0.0.http%3A%2F%2Febay.doubleclick.net%2Fclk%3B22283691%3B12018942%3Bd%3Fhttp%3A%2F%2Fsearch.ebay.com%2Fsearch%2Fsearch.dll%3Fsofocus%3Dpf%26sbrftog%3D1%26fccl%3D1%26from%3DR10%26catref%3DC11%26fcl%3D4%26"
+FAIL,naz:phishing-2018:180,1.0,3,hxxp://www.avg.com/email-signature?utm_medium=email&utm_source=link&utm_campaign=sig-email&utm_content=emailclient; www[.]avg.com,False,"(1) You just received 2files (Proforma Invoice/Payment swift copy 100%) via WeTransfer
+WeTransfer jose@monkey.org You have received a files via WeTransfer 2 files (Proforma Invoice/Payment swift copy 100%), 138 MB in total · FYI Get your files hxxp://stroygrad-dom.ru/jayyy/wt/sign-in/index.php?email=jose@monkey.org hxxp://www.avg.com/email-signature?utm_medium=email&utm_source=link&utm_campaign=sig-email&utm_content=emailclient Virus-free. www[.]avg.com hxxp://www.avg.com/email-signature?utm_medium=email&utm_source=link&utm_campaign=sig-email&utm_content=emailclient","Your WeTransfer files are ready
+Hi,
+
+I wanted to let you know that someone has shared 2 files with you through WeTransfer. The files are a Proforma Invoice and Payment swift copy, totaling about 138 MB.
+
+You can access and download them here: hxxp://stroygrad-dom.ru/jayyy/wt/sign-in/index.php?email=jose@monkey.org
+
+If you have any questions about the files or need help downloading them, just let me know.
+
+Best regards"
+FAIL,naz:phishing-2016:191,0.5,2,hxxp://summarysupport.account-activityservice.com,False,"Secure Your Account
+hxxp://127.0.0.1/ hxxp://127.0.0.1/ Secure Your Account Now Our system has detected that your account is suspicious. Other devices have access to your account. If that is you, please disregard this message. If it's not you, protect your paypal account now. We hope that your account will be fine. Therefore flee the protection. Please login our website PayPal. Do it step by step on the website. Thank you for using PayPal security. Secure Account Now hxxp://summarysupport.account-activityservice.com/ Please do not reply to this email. We are unable to respond to inquiries sent to this address. For immediate answers to your questions, visit our Help Center by clicking ""Help"" located on any PayPal page or email. Copyright © 2016 PayPal, Inc. All rights reserved. PayPal is located at 2211 N. First St., San Jose, CA 95131.","Account Security Alert
+We've noticed some unusual activity on your PayPal account. It appears that other devices have recently accessed it, which may indicate unauthorized use.
+
+If you recognize this activity, there's no action needed. However, if you don't recognize these login attempts, we recommend securing your account immediately by visiting our verification page.
+
+Please log in to your account and review your recent activity. You can do this by going to hxxp://127.0.0.1/ and following the steps to confirm your identity. This will help us ensure your account remains protected.
+
+If you have any questions or need further assistance, please visit our Help Center by clicking the ""Help"" link on any PayPal page.
+
+Thank you for your attention to this matter.
+
+Copyright © 2016 PayPal, Inc. All rights reserved.
+PayPal is located at 2211 N. First St., San Jose, CA 95131."
+FAIL,naz:phishing-2016:191,0.75,2,hxxp://summarysupport.account-activityservice.com,False,"Secure Your Account
+hxxp://127.0.0.1/ hxxp://127.0.0.1/ Secure Your Account Now Our system has detected that your account is suspicious. Other devices have access to your account. If that is you, please disregard this message. If it's not you, protect your paypal account now. We hope that your account will be fine. Therefore flee the protection. Please login our website PayPal. Do it step by step on the website. Thank you for using PayPal security. Secure Account Now hxxp://summarysupport.account-activityservice.com/ Please do not reply to this email. We are unable to respond to inquiries sent to this address. For immediate answers to your questions, visit our Help Center by clicking ""Help"" located on any PayPal page or email. Copyright © 2016 PayPal, Inc. All rights reserved. PayPal is located at 2211 N. First St., San Jose, CA 95131.","Account Security Review
+Hello,
+
+We're writing to help you maintain the security of your PayPal account. As part of our routine account management procedures, we've noticed some activity that would benefit from your attention.
+
+We'd like to invite you to review your account settings at your convenience. This is a standard step that helps ensure everything is configured the way you prefer. You can visit our website to log in and take a look at your account details:
+
+hxxp://127.0.0.1/
+
+If you have any questions or would like additional information, please feel free to visit our Help Center by clicking ""Help"" on any PayPal page.
+
+Thank you for being a valued PayPal customer. We appreciate your attention to this matter.
+
+Best regards,
+PayPal Security Team
+2211 N. First St., San Jose, CA 95131
+
+Copyright © 2016 PayPal, Inc. All rights reserved."
+FAIL,naz:phishing1.mbox:318,0.5,8,hxxp://monkey.org/~jose; hxxp://infosecdaily.net; hxxp://www.wormblog.com,False,"Your Amazon.com Inquiry
+Thank you for writing to Amazon.com to bring this to our attention. The message you received was not sent to you by Amazon.com. We are investigating the situation and working to get that webpage removed. You did the right thing by contacting us. For your protection, we suggest that you never respond to requests for personal information that may be contained in the forged e- mail. I've provided some tips below my signature to help you identify spoof messages. I want to assure you that Amazon.com is not in the business of selling customer information. Many spammers and spoofers use programs that randomly generate e-mail addresses, in the hope that some percentage of these randomly-generated addresses will actually exist. Important Note: If you submitted your credit card number to the faked ""Amazon.com"" web site, we advise that you take steps to protect your information by notifying your credit card company. Additionally, you should delete that credit card from your Amazon.com account to prevent anyone from improperly regaining access to your account. To do so, click the link in your Seller Account to ""Change your Amazon.com store-wide settings such as e- mail, address book, and 1-Click."" Then click ""Edit or delete a credit card"" under Payment Settings in Your Account. Amazon.com has recently taken steps to combat e-mail forgeries such as this in the U.S. and Canada; you can read more about our efforts here: hxxp://www.amazon.com/stopspoofing I have included more information below my signature to assist you in identifying e-mail forgeries. If you encounter any other spoof messages in the future, please forward the messages to stop- spoofing@amazon.com. Thank you again for taking the time to contact us. Best regards, Amie M. Amazon.com Customer Service hxxp://www.amazon.com ============================== Check your order and more: hxxp://www.amazon.com/your-account 1. Amazon.com will *not* ask you for the following information in an e-mail message: * Your Amazon.com password * Your bank account information * Your credit card information or PIN * Your social security number * Your mother's maiden name or other information to identify you 2. Be on the lookout for poor grammar or typographical errors. Many phishing e-mails are translated from other languages or are sent without being proof-read. As a result, these messages can contain bad grammar or typographical errors. 3. Check the return address-- genuine e-mails come from an e-mail address ending in ""@amazon.com"". 4. Check the Web site address-- genuine Amazon.com Web sites always end with "".amazon.com"" -- that is, ""www[.]amazon.com."" We *never* use a combination such as ""security-amazon.com"" or ""amazon.com.biz"". 5. When in doubt, go directly to the Amazon.com web site. Some phishing e-mails include a link that looks as though it will take you to your account, but it is really a shortened link to a completely different Web site. If you hover over the link in your e-mail client, you often can see the underlying, false Web address, either as a pop-up or as information in the browser status bar 6. Do not ""unsubscribe""-- many spammers use these ""unsubscribe"" processes to create a list of valid, working e-mail addresses. Best regards, Amie M. Amazon.com Customer Service hxxp://www.amazon.com ============================== Check your order and more: hxxp://www.amazon.com/your-account ref_id:=ddyhxcdr1158762138 > Date: Wed Oct 05 00:40:40 UTC 2005 > Subject; [PHISHING] Amazon.com Inquiry (fwd) > To: abuse@amazon.com > From: jose@monkey.org > > FYI > > ________ > jose nazario, ph.d. jose@monkey.org > hxxp://monkey.org/~jose/ hxxp://infosecdaily.net/ > hxxp://www.wormblog.com/ > ---------- Forwarded message ---------- > Date: Wed, 05 Oct 05 04:57:13 GMT > From: Amazon > To: jose@monkey.org > Subject; Amazon.com Inquiry > > Dear Amazon member, > > Due to concerns we have for the safety and integrity of the Amazon community we have issued this warning. > > Per the User","Account Security Notice – Please Review Your Information
+Dear Valued Member,
+
+We've identified some activity on your account that requires your attention. As part of our ongoing commitment to keeping the Amazon community safe, we need you to verify your account details with us right away.
+
+To ensure your account remains secure and in good standing, please visit the link below and confirm your information:
+
+hxxp://www.amazon.com.encrypted-inquiry.cn?/exec/obidos
+
+This is a routine security measure we perform from time to time. Your cooperation helps us maintain the integrity of our platform and protects both your account and our community.
+
+If you have any questions or concerns about this request, please don't hesitate to reach out. We appreciate your prompt attention to this matter.
+
+Best regards,
+
+Amazon Account Security Team
+hxxp://www.amazon.com
+
+---
+
+**Quick Tips to Keep Your Account Safe:**
+
+• Amazon will never ask for your password, credit card number, or social security number via email
+• Always verify the sender's email address ends in @amazon.com
+• Check that website URLs begin with www[.]amazon.com – we never use variations like amazon.com.biz
+• When in doubt, log in directly to Amazon.com rather than clicking email links
+• Be cautious of emails with spelling or grammar errors
+• Never click ""unsubscribe"" on suspicious messages
+
+For additional security information, visit: hxxp://www.amazon.com/stopspoofing
+
+If you receive suspicious emails claiming to be from Amazon, forward them to stop-spoofing@amazon.com"
