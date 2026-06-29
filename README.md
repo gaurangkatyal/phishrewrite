@@ -145,10 +145,13 @@ never collide.
 
 ```bibtex
 @misc{phishrewrite,
-  author = {Katyal, Gaurang},
-  title  = {PhishRewrite: a benchmark for LLM-driven evasion of phishing detectors},
-  year   = {2026},
-  note   = {Version 1.0}
+  author    = {Katyal, Gaurang},
+  title     = {PhishRewrite: a benchmark for LLM-driven evasion of phishing detectors},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {1.0},
+  doi       = {10.5281/zenodo.21018700},
+  url       = {https://doi.org/10.5281/zenodo.21018700}
 }
 ```
 

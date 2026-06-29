@@ -208,8 +208,10 @@ SpamAssassin public corpus (ham subsets only), and the Enron email corpus
   title        = {{PhishRewrite: Measuring Phishing-Detector Degradation under LLM Rewriting}},
   author       = {{Katyal, Gaurang}},
   year         = {{2026}},
-  howpublished = {{Zenodo}},
-  note         = {{Version {version}. Defensive-research benchmark. DOI: <add on upload>}}
+  publisher    = {{Zenodo}},
+  doi          = {{10.5281/zenodo.21018700}},
+  url          = {{https://doi.org/10.5281/zenodo.21018700}},
+  note         = {{Version {version}. Defensive-research benchmark.}}
 }}
 ```
 
