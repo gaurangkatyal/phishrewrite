@@ -28,10 +28,7 @@ def compute_metrics(
     y_score: np.ndarray,
     threshold: float = 0.5,
 ) -> dict[str, float]:
-    """Return the standard metric dict for binary labels and positive-class scores.
-
-    y_score is P(label == 1). Threshold-based metrics use `threshold`.
-    """
+    """y_score is P(label == 1). AUCs ignore `threshold`; f1/precision/recall use it."""
     y_true = np.asarray(y_true)
     y_score = np.asarray(y_score)
     y_pred = (y_score >= threshold).astype(int)

@@ -75,9 +75,7 @@ def step(name: str):
     return run
 
 
-# --------------------------------------------------------------------------- #
 # Sentinels
-# --------------------------------------------------------------------------- #
 def sentinel_state(task: str) -> str | None:
     if (SENT / f"{task}.done").exists():
         return "done"
@@ -107,9 +105,7 @@ def wait_for_sentinels() -> bool:
     return False
 
 
-# --------------------------------------------------------------------------- #
 # CSV helpers
-# --------------------------------------------------------------------------- #
 def _load(name: str) -> pd.DataFrame | None:
     p = TABLES / name
     return pd.read_csv(p) if p.exists() else None
@@ -127,9 +123,7 @@ def _curve(df, **filt):
     return sub
 
 
-# --------------------------------------------------------------------------- #
 # Markdown section builders (numbers computed straight from the CSVs)
-# --------------------------------------------------------------------------- #
 def md_transformer() -> str:
     df = _load("transformer_degradation.csv")
     era = _load("transformer_era.csv")
@@ -446,9 +440,7 @@ def md_significance() -> str:
     return "\n".join(md)
 
 
-# --------------------------------------------------------------------------- #
 # Transformer McNemar (paired-significance method applied to the neural detector) — guarded
-# --------------------------------------------------------------------------- #
 def transformer_mcnemar() -> str:
     from scipy.stats import binomtest
 
@@ -494,9 +486,7 @@ def transformer_mcnemar() -> str:
     )
 
 
-# --------------------------------------------------------------------------- #
 # Figures (from CSVs — no heavy recompute) — guarded
-# --------------------------------------------------------------------------- #
 def make_overlay_figure() -> str:
     import matplotlib
 
@@ -548,10 +538,8 @@ def make_overlay_figure() -> str:
     return f"wrote {out.name}"
 
 
-# --------------------------------------------------------------------------- #
 # Run report — write the consolidated numbers to a standalone file under logs/.
 # RESULTS.md is maintained by hand and is intentionally not written here.
-# --------------------------------------------------------------------------- #
 def fold_into_results() -> str:
     sections = [
         "# Overnight run report",
@@ -574,9 +562,7 @@ def fold_into_results() -> str:
     return f"wrote run report ({len(block)} chars) -> {REPORT_MD.name}"
 
 
-# --------------------------------------------------------------------------- #
 # Consistency pass — guarded assertions, results recorded
-# --------------------------------------------------------------------------- #
 def consistency_pass() -> str:
     checks: list[tuple[str, bool, str]] = []
 
@@ -645,9 +631,7 @@ def consistency_pass() -> str:
     return f"{ok}/{len(checks)} consistency checks passed :: {detail}"
 
 
-# --------------------------------------------------------------------------- #
 # Tests — guarded
-# --------------------------------------------------------------------------- #
 def run_tests() -> str:
     r = subprocess.run(
         [PY, "-m", "pytest", "tests/", "-q"],
@@ -664,9 +648,7 @@ def run_tests() -> str:
     return summary
 
 
-# --------------------------------------------------------------------------- #
 # STATUS.md
-# --------------------------------------------------------------------------- #
 def _spent_estimate() -> str:
     # rough: B ~ $1.10 Haiku (sync) ; D ~ $0.45-0.91 Gemini. A & C no API.
     parts = []
@@ -851,9 +833,7 @@ def write_status() -> str:
     return f"wrote {STATUS_MD.name}"
 
 
-# --------------------------------------------------------------------------- #
 # Main
-# --------------------------------------------------------------------------- #
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Autonomous overnight finalizer")
     ap.add_argument(

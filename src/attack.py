@@ -123,9 +123,7 @@ _REFUSAL_MARKERS = (
 )
 
 
-# --------------------------------------------------------------------------- #
 # Prompts
-# --------------------------------------------------------------------------- #
 def load_system_prompt() -> str:
     return (config.PROMPTS_DIR / "system.txt").read_text(encoding="utf-8")
 
@@ -174,9 +172,7 @@ def text_sha(email_text: str) -> str:
     return hashlib.sha256(email_text.encode("utf-8")).hexdigest()
 
 
-# --------------------------------------------------------------------------- #
 # Sampling the phishing test pool (seeded, stable)
-# --------------------------------------------------------------------------- #
 def sample_phish_test(limit: int | None = None) -> pd.DataFrame:
     """The seeded sample of held-out phishing emails to attack.
 
@@ -191,9 +187,7 @@ def sample_phish_test(limit: int | None = None) -> pd.DataFrame:
     return sample
 
 
-# --------------------------------------------------------------------------- #
 # Rewrite parsing + URL-retention check
-# --------------------------------------------------------------------------- #
 def parse_rewrite(raw: str) -> tuple[str, str, str]:
     """Split a model rewrite into (subject, body, full_text).
 
@@ -247,9 +241,7 @@ def looks_like_refusal(rewrite_full: str) -> bool:
     return any(m in low for m in _REFUSAL_MARKERS)
 
 
-# --------------------------------------------------------------------------- #
 # Primary-URL retention (a less conservative label-validity variant)
-# --------------------------------------------------------------------------- #
 # The strict check (check_retention) requires EVERY original URL to survive. That
 # over-counts failures: rewrites that drop only incidental links (social/footer/
 # tracking/unsubscribe/asset) while keeping the credential-harvest ("primary")
@@ -432,9 +424,7 @@ def check_retention_primary(original_text: str, rewrite_full: str) -> dict:
     }
 
 
-# --------------------------------------------------------------------------- #
 # Provider abstraction
-# --------------------------------------------------------------------------- #
 class Rewriter:
     """Thin provider wrapper. Anthropic (Haiku) and Gemini (Flash) are implemented
     so the benchmark can show the attack holds across rewriting models; openai/
@@ -567,9 +557,7 @@ class Rewriter:
         return raw, usage
 
 
-# --------------------------------------------------------------------------- #
 # Rewrite cache (JSONL, resumable)
-# --------------------------------------------------------------------------- #
 def _cache_key(original_id, severity: float) -> str:
     return f"{original_id}|{severity:.2f}"
 
@@ -636,9 +624,7 @@ def make_record(row, severity, instruction, system, rewriter, raw, usage) -> dic
     }
 
 
-# --------------------------------------------------------------------------- #
 # Token / cost estimate (no API calls; char/4 heuristic)
-# --------------------------------------------------------------------------- #
 def _approx_tokens(text: str) -> int:
     return max(1, len(text) // 4)
 
@@ -709,9 +695,7 @@ def estimate(limit: int | None = None) -> None:
     print("  (heuristic char/4 token counts; actual usage is recorded per call.)")
 
 
-# --------------------------------------------------------------------------- #
 # Show prompts
-# --------------------------------------------------------------------------- #
 def show_prompts() -> None:
     system = load_system_prompt()
     severities = load_severity_prompts()
@@ -727,9 +711,7 @@ def show_prompts() -> None:
         print(text.rstrip())
 
 
-# --------------------------------------------------------------------------- #
-# Synchronous rewrite loop (pilot + full run share this)
-# --------------------------------------------------------------------------- #
+# Synchronous rewrite loop (the attack + mitigation passes all share this)
 def _retention_label(rec: dict) -> str:
     if rec.get("refused"):
         return "REFUSED (model returned meta-text, not an email)"
@@ -739,44 +721,47 @@ def _retention_label(rec: dict) -> str:
     return "PASS" if r else f"FAIL (missing {len(rec['missing_urls'])}/{rec['n_orig_urls']})"
 
 
-def run_sync(sample: pd.DataFrame, *, show_each: bool, label: str) -> list[dict]:
-    # Pre-flight: fail fast if the provider's API key is missing/empty, before
-    # any call is issued. Guards every spend path (pilot + full run).
-    config.require_api_key(config.ATTACK_PROVIDER)
-    system = load_system_prompt()
-    severities = load_severity_prompts()
-    rewriter = Rewriter(
-        config.ATTACK_PROVIDER,
-        config.model_for(),
-        config.ATTACK_TEMPERATURE,
-        config.ATTACK_MAX_TOKENS,
-    )
-    cache = load_rewrite_cache()
+def run_rewrite_loop(
+    sample: pd.DataFrame,
+    sevs: dict[float, str],
+    *,
+    rewriter: "Rewriter",
+    system: str,
+    cache: dict,
+    append_fn,
+    header: str,
+    label: str,
+    rpm: int = 0,
+    show_each: bool = False,
+    retention_summary: bool = False,
+) -> list[dict]:
+    """Drive one rewrite pass over sample x severities, reusing cache where possible.
 
-    records: list[dict] = []
-    todo = [(row, sev) for _, row in sample.iterrows() for sev in severities]
+    Shared by the main attack (run_sync) and the mitigation / external-validity
+    passes. For each (email, severity) it reuses a cache hit whose prompt config and
+    input text are both unchanged, otherwise it calls the model and appends the new
+    record via append_fn. Per-call errors are logged and skipped so a later re-run
+    retries them; only fatal account-level errors abort. Returns cached + new records.
+    """
+    todo = [(row, sev) for _, row in sample.iterrows() for sev in sevs]
     n_total = len(todo)
+    records: list[dict] = []
     n_done = n_skipped = n_errored = 0
     # Client-side request pacing (RPM cap), applied only to real API calls.
-    min_interval = 60.0 / config.ATTACK_RPM if config.ATTACK_RPM > 0 else 0.0
+    min_interval = 60.0 / rpm if rpm > 0 else 0.0
     last_call_at = 0.0
-    print(
-        f"=== {label}: {len(sample)} emails x {len(severities)} severities "
-        f"= {n_total} calls ==="
-    )
+    print(header)
     if min_interval:
-        print(
-            f"  pacing: <= {config.ATTACK_RPM} req/min " f"(min {min_interval:.3f}s between calls)"
-        )
+        print(f"  pacing: <= {rpm} req/min (min {min_interval:.3f}s between calls)")
     t0 = time.time()
     for row, sev in todo:
         key = _cache_key(row["original_id"], sev)
-        ph = prompt_hash(system, severities[sev], row["text"], rewriter.model, rewriter.temperature)
+        ph = prompt_hash(system, sevs[sev], row["text"], rewriter.model, rewriter.temperature)
         th = text_sha(row["text"])
         cached = cache.get(key)
         # Reuse only if BOTH the prompt config and the input text are unchanged.
-        # input_text_sha is the explicit text guard; the `or absent` clause keeps
-        # legacy caches (pre-field) valid since prompt_hash already encodes text.
+        # input_text_sha is the explicit text guard; the missing-field fallback keeps
+        # legacy caches (pre-field) valid since prompt_hash already encodes the text.
         if cached and cached.get("prompt_hash") == ph and cached.get("input_text_sha", th) == th:
             n_skipped += 1
             records.append(cached)
@@ -787,7 +772,7 @@ def run_sync(sample: pd.DataFrame, *, show_each: bool, label: str) -> list[dict]
                 time.sleep(wait)
         last_call_at = time.time()
         try:
-            raw, usage = rewriter.rewrite(severities[sev], row["text"])
+            raw, usage = rewriter.rewrite(sevs[sev], row["text"])
         except Exception as e:  # noqa: BLE001 — one bad call must not abort the run
             fatal = fatal_account_message(e)
             if fatal:
@@ -805,8 +790,8 @@ def run_sync(sample: pd.DataFrame, *, show_each: bool, label: str) -> list[dict]
                 f"{row['original_id']} sev={sev:.2f} ERROR (skipped): {msg}"
             )
             continue  # not cached/recorded; a later re-run will retry this pair
-        rec = make_record(row, sev, severities[sev], system, rewriter, raw, usage)
-        append_rewrite(rec)
+        rec = make_record(row, sev, sevs[sev], system, rewriter, raw, usage)
+        append_fn(rec)
         cache[key] = rec
         records.append(rec)
         n_done += 1
@@ -818,10 +803,43 @@ def run_sync(sample: pd.DataFrame, *, show_each: bool, label: str) -> list[dict]
                 f"sev={sev:.2f} retention={_retention_label(rec)}"
             )
     dt = time.time() - t0
-    print(
-        f"\n  done: {n_done} new, {n_skipped} cached, " f"{n_errored} errored/skipped, in {dt:.1f}s"
-    )
+    print(f"\n  done: {n_done} new, {n_skipped} cached, {n_errored} errored/skipped, in {dt:.1f}s")
+    if retention_summary:
+        _retention_summary(records)
     return records
+
+
+def run_sync(sample: pd.DataFrame, *, show_each: bool, label: str) -> list[dict]:
+    # TODO: this is the synchronous path (RPM-paced, one request at a time). The
+    # cost estimate already assumes the 50%-off Batch API (config.USE_BATCH), but
+    # the actual batch-submit path isn't wired up yet — runs are sync regardless.
+    # Fail fast if the provider's API key is missing/empty before any call is
+    # issued; this guards every spend path (pilot + full run).
+    config.require_api_key(config.ATTACK_PROVIDER)
+    system = load_system_prompt()
+    severities = load_severity_prompts()
+    rewriter = Rewriter(
+        config.ATTACK_PROVIDER,
+        config.model_for(),
+        config.ATTACK_TEMPERATURE,
+        config.ATTACK_MAX_TOKENS,
+    )
+    header = (
+        f"=== {label}: {len(sample)} emails x {len(severities)} severities "
+        f"= {len(sample) * len(severities)} calls ==="
+    )
+    return run_rewrite_loop(
+        sample,
+        severities,
+        rewriter=rewriter,
+        system=system,
+        cache=load_rewrite_cache(),
+        append_fn=append_rewrite,
+        header=header,
+        label=label,
+        rpm=config.ATTACK_RPM,
+        show_each=show_each,
+    )
 
 
 def _print_rewrite(row, rec: dict) -> None:
@@ -877,9 +895,7 @@ def run_full() -> None:
     print(f"\nWrote rewrites -> {rewrites_path()}")
 
 
-# --------------------------------------------------------------------------- #
 # CLI
-# --------------------------------------------------------------------------- #
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="PhishRewrite attack")
     parser.add_argument(

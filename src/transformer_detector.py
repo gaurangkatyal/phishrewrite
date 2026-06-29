@@ -3,14 +3,14 @@
 Answers the reviewer question: does the LLM-rewrite degradation hold for a modern
 neural detector, and is that detector also URL-anchored?
 
-Everything is held identical to the classical pipeline so numbers are directly
-comparable: SAME train split (22,560), SAME `text` field (subject+body), SAME
-labels, SAME strict-270 Haiku intersection, SAME Gemini intersection (308), SAME
-fixed-1%-FPR-on-clean-ham operating point, SAME 1000-seed bootstrap CIs, SAME
-url-masking transform (`ablation.mask_urls`). For the transformer the url-masked
-condition is INFERENCE-TIME masking of the inputs (there is no url_count feature
-to zero), which differs from the classical URL-blind *retrain*; this is noted in
-RESULTS.md.
+Everything is held identical to the classical pipeline so the numbers stay
+directly comparable: same train split (22,560), same `text` field (subject+body),
+labels, strict-270 Haiku intersection, Gemini intersection (308), the
+fixed-1%-FPR-on-clean-ham operating point, 1000-seed bootstrap CIs, and the
+url-masking transform (`ablation.mask_urls`). The one difference: for the
+transformer the url-masked condition is inference-time masking of the inputs
+(there's no url_count feature to zero), unlike the classical URL-blind retrain.
+Noted in RESULTS.md.
 
 Memory footprint (MPS OOM mitigation): inputs are head-truncated to the FIRST 256
 tokens (max_len 256, truncation_side='right'); per-device batch 8 x grad-accum 2
@@ -85,9 +85,7 @@ def _device() -> str:
     return "cpu"
 
 
-# --------------------------------------------------------------------------- #
 # Training
-# --------------------------------------------------------------------------- #
 def _train_frame(augment: bool) -> pd.DataFrame:
     df = features.load_dataset()
     train = df[df["split"] == "train"][["text", "label"]].reset_index(drop=True)
@@ -235,9 +233,7 @@ def finetune(
     )
 
 
-# --------------------------------------------------------------------------- #
 # Inference
-# --------------------------------------------------------------------------- #
 _CACHE: dict = {}
 
 
@@ -268,9 +264,7 @@ def predict_proba(texts: list[str], out_dir: Path) -> np.ndarray:
     return out
 
 
-# --------------------------------------------------------------------------- #
 # Scoring helpers (mirror evaluate/_score_curve + ablation fixed-FPR)
-# --------------------------------------------------------------------------- #
 def _maybe_mask(texts: list[str], masked: bool) -> list[str]:
     return [ablation.mask_urls(t) for t in texts] if masked else list(texts)
 

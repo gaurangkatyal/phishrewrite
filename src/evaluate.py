@@ -37,9 +37,7 @@ from .metrics import METRIC_NAMES, compute_metrics
 CURVE_SEVERITIES: tuple[float, ...] = config.SEVERITIES  # (0.0, 0.25, 0.5, 0.75, 1.0)
 
 
-# --------------------------------------------------------------------------- #
 # Clean baseline
-# --------------------------------------------------------------------------- #
 def evaluate_clean() -> pd.DataFrame:
     _, _, x_test, y_test = features.load_features()
     rows: list[dict] = []
@@ -60,9 +58,7 @@ def evaluate_clean() -> pd.DataFrame:
     return df
 
 
-# --------------------------------------------------------------------------- #
 # Rewrite-evaluation helpers
-# --------------------------------------------------------------------------- #
 def load_rewrites(path=None) -> list[dict]:
     path = path or config.REWRITES_JSONL
     if not path.exists():
@@ -113,9 +109,7 @@ def _era_of(original_id: str) -> str:
     return "legacy_mbox" if tag.endswith(".mbox") else "modern_year"
 
 
-# --------------------------------------------------------------------------- #
 # Feature assembly
-# --------------------------------------------------------------------------- #
 def _ham_features() -> sparse.csr_matrix:
     """Featurize the full test-set ham once (the fixed negative class)."""
     df = features.load_dataset()
@@ -156,9 +150,7 @@ def _orig_text_map() -> dict[str, dict]:
     }
 
 
-# --------------------------------------------------------------------------- #
 # Metrics + bootstrap
-# --------------------------------------------------------------------------- #
 def _bootstrap_cis(
     y_true: np.ndarray,
     y_score: np.ndarray,
@@ -251,9 +243,7 @@ def _era_ablation(
     return rows
 
 
-# --------------------------------------------------------------------------- #
 # Spot-check export
-# --------------------------------------------------------------------------- #
 def _export_spotcheck(
     recs: list[dict], orig_text: dict[str, dict], n_pass: int = 30, n_fail: int = 10
 ) -> int:
@@ -284,9 +274,7 @@ def _export_spotcheck(
     return len(rows)
 
 
-# --------------------------------------------------------------------------- #
 # Figure
-# --------------------------------------------------------------------------- #
 def _plot_curve(headline: pd.DataFrame) -> None:
     import matplotlib
 
@@ -326,9 +314,7 @@ def _plot_curve(headline: pd.DataFrame) -> None:
     print(f"  figure -> {out}")
 
 
-# --------------------------------------------------------------------------- #
 # Orchestrator
-# --------------------------------------------------------------------------- #
 def evaluate_degradation() -> None:
     config.ensure_dirs()
     recs = load_rewrites()

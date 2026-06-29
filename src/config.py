@@ -30,16 +30,12 @@ except ModuleNotFoundError:  # allow importing config before deps are installed
         return False
 
 
-# --------------------------------------------------------------------------- #
 # Reproducibility
-# --------------------------------------------------------------------------- #
 # One seed governs the train/test split, cross-validation shuffling, phishing
 # sampling for the attack, bootstrap resampling, and every model's random_state.
 SEED: int = 42
 
-# --------------------------------------------------------------------------- #
 # Paths
-# --------------------------------------------------------------------------- #
 ROOT: Path = Path(__file__).resolve().parents[1]
 DATA_DIR: Path = ROOT / "data"
 RAW_DIR: Path = DATA_DIR / "raw"
@@ -62,9 +58,7 @@ def ensure_dirs() -> None:
         d.mkdir(parents=True, exist_ok=True)
 
 
-# --------------------------------------------------------------------------- #
 # Unified schema
-# --------------------------------------------------------------------------- #
 # Order is authoritative; data_prep writes exactly these columns.
 SCHEMA_COLUMNS: tuple[str, ...] = (
     "id",  # stable unique id within the processed table
@@ -81,9 +75,7 @@ SCHEMA_COLUMNS: tuple[str, ...] = (
 LABEL_PHISHING: int = 1
 LABEL_HAM: int = 0
 
-# --------------------------------------------------------------------------- #
 # Datasets (public, named research corpora)
-# --------------------------------------------------------------------------- #
 # IMPORTANT label policy:
 #   - SpamAssassin contributes HAM ONLY (easy_ham, easy_ham_2, hard_ham).
 #     The spam subsets are EXCLUDED: generic spam != phishing and mislabeling it
@@ -135,17 +127,13 @@ SOURCES: dict[str, SourceSpec] = {
 # (seeded) rather than ingesting all ~500k. Set to None to use all (not advised).
 ENRON_HAM_SAMPLE: int = 20_000
 
-# --------------------------------------------------------------------------- #
 # Split / cross-validation / bootstrap
-# --------------------------------------------------------------------------- #
 TEST_SIZE: float = 0.20  # stratified, seeded
 CV_FOLDS: int = 5  # stratified k-fold on the training set
 N_BOOTSTRAP: int = 1_000  # bootstrap resamples for test-set metric CIs
 BOOTSTRAP_CI: float = 0.95  # confidence level for reported intervals
 
-# --------------------------------------------------------------------------- #
 # Attack: severities
-# --------------------------------------------------------------------------- #
 # Severity encodes rewrite AGGRESSIVENESS (in the prompt), not a fraction of
 # emails. At severity s, every sampled phishing TEST email is replaced by its own
 # severity-s rewrite; ham is never attacked. 0.0 is the clean anchor.
@@ -167,9 +155,7 @@ SEVERITY_PROMPT_FILES: dict[float, Path] = {
 # data_prep/attack report the projected call count and pause before spending.
 MAX_PHISH_SAMPLE: int = 500
 
-# --------------------------------------------------------------------------- #
 # Attack: provider abstraction
-# --------------------------------------------------------------------------- #
 # The provider/model is configurable so results can later be shown to hold across
 # rewriting models. First run uses Anthropic Haiku only.
 ATTACK_PROVIDER: str = os.environ.get(
@@ -259,9 +245,7 @@ def model_for(provider: str | None = None) -> str:
     return DEFAULT_MODEL_FOR_PROVIDER.get(provider, ATTACK_MODEL)
 
 
-# --------------------------------------------------------------------------- #
 # Features
-# --------------------------------------------------------------------------- #
 TFIDF_MAX_FEATURES: int = 20_000
 TFIDF_NGRAM_RANGE: tuple[int, int] = (1, 2)
 TFIDF_MIN_DF: int = 2

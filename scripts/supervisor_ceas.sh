@@ -27,9 +27,7 @@ log(){ echo "[$(date '+%F %T')] $*" >>"$SLOG"; }
 
 log "=== supervisor_ceas start (pid $$) root=$ROOT ==="
 
-# --------------------------------------------------------------------------- #
 # 1. caffeinate: anti-sleep + watchdog
-# --------------------------------------------------------------------------- #
 ensure_caffeinate(){
   if ! pgrep -x caffeinate >/dev/null 2>&1; then
     nohup caffeinate -dimsu -t 86400 >/dev/null 2>&1 & disown
@@ -40,9 +38,7 @@ ensure_caffeinate
 ( while true; do sleep 300; ensure_caffeinate; done ) & disown
 log "caffeinate watchdog started (pid $!) — checks every 5 min"
 
-# --------------------------------------------------------------------------- #
 # sentinel helpers
-# --------------------------------------------------------------------------- #
 mark_done(){  # task, message
   local t="$1"; shift
   rm -f "$SENT/$t.failed"
@@ -56,10 +52,8 @@ mark_failed(){  # task, reason, resume-cmd
   log "$t -> FAILED: $reason"
 }
 
-# --------------------------------------------------------------------------- #
 # 2. Train CEAS transformer + score cached rewrites (no API)
 #    Auto-resume from checkpoint on OOM death, up to MAXR.
-# --------------------------------------------------------------------------- #
 E_CSV="$ROOT/results/tables/transformer_ceas_degradation.csv"
 RESUME_CMD="PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 $PY -u -m src.transformer_ceas --all"
 MAXR=6; retries=0
@@ -87,9 +81,7 @@ while true; do
   sleep 60
 done
 
-# --------------------------------------------------------------------------- #
 # 3. Consolidate (only if the CSV was produced) — write run report + STATUS
-# --------------------------------------------------------------------------- #
 if [ -f "$E_CSV" ]; then
   if "$PY" -m src.transformer_ceas --consolidate >>"$LOGD/transformer_ceas_run.log" 2>&1; then
     # append a STATUS section (idempotent: drop any prior CEAS block first)

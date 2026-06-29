@@ -1,26 +1,23 @@
 """DistilBERT transformer baseline on the CEAS-2008 corpus (no API).
 
-Reviewer question this answers
-------------------------------
-On the Nazario corpus the primary transformer run (src.transformer_detector)
-found DistilBERT resisted LLM rewriting and did not appear URL-anchored — the
-opposite of the classical bag-of-words detectors. A skeptic can object that this
-is a Nazario-specific artifact (the transformer simply memorised the Nazario
-phishing style). CEAS-2008
-breaks that confound: it is a *same-era* (both classes 2008), *different* corpus.
-If the transformer's robustness + non-URL-anchoring reproduce here, the finding is
-corpus-independent rather than a single-dataset quirk.
+This is the corpus-independence check. On Nazario the primary transformer run
+(src.transformer_detector) found DistilBERT resisted LLM rewriting and didn't
+look URL-anchored — the opposite of the classical bag-of-words detectors. The
+obvious objection: maybe that's a Nazario-specific artifact (the transformer just
+memorised the Nazario phishing style). CEAS-2008 breaks the confound — same-era
+(both classes 2008) but a different corpus. If the robustness + non-URL-anchoring
+reproduce here, the finding is corpus-independent, not a single-dataset quirk.
 
-Held identical to the primary transformer run so numbers are directly comparable:
-  * SAME frugal fine-tune config (max_len 256 head-truncation, per-device batch 8
+Held identical to the primary transformer run so the numbers stay comparable:
+  * the frugal fine-tune config (max_len 256 head-truncation, per-device batch 8
     x grad-accum 2 = eff 16, gradient checkpointing, save_steps 200 + resume,
     num_workers 0, MPS empty_cache + PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0,
     seed 42, class-weighted CE, 3 epochs, lr 2e-5) — reused verbatim from
-    transformer_detector.finetune(frame=...).
-  * SAME metrics: recall@0.5, det@1%-FPR-on-clean-ham, PR-AUC, ROC-AUC, with
-    1000-seed bootstrap CIs and McNemar exact paired test (sev0 vs sev1).
-  * SAME url-masked condition = INFERENCE-TIME masking of inputs (ablation.mask_urls),
-    matching the primary transformer run (not the classical URL-blind retrain).
+    transformer_detector.finetune(frame=...);
+  * the same metrics: recall@0.5, det@1%-FPR-on-clean-ham, PR-AUC, ROC-AUC, with
+    1000-seed bootstrap CIs and a McNemar exact paired test (sev0 vs sev1);
+  * url-masked = inference-time masking of inputs (ablation.mask_urls), like the
+    primary run (not the classical URL-blind retrain).
 
 CEAS specifics (mirrors src.external_validity):
   * train on the CEAS-2008 train split (stratified 0.20 seeded test holdout),
@@ -58,9 +55,7 @@ CURVE_SEVERITIES = ev.CURVE_SEVERITIES  # (0.0, 0.25, 0.5, 0.75, 1.0)
 TARGET_FPR = ev.TARGET_FPR  # 0.01
 
 
-# --------------------------------------------------------------------------- #
 # Training — CEAS train split, frugal config reused from transformer_detector
-# --------------------------------------------------------------------------- #
 def _ceas_train_frame() -> pd.DataFrame:
     df = ev.build_dataset()
     train = df[df["split"] == "train"][["text", "label"]].reset_index(drop=True)
@@ -74,9 +69,7 @@ def finetune() -> None:
     td.finetune(CEAS_BASE_DIR, augment=False, frame=_ceas_train_frame())
 
 
-# --------------------------------------------------------------------------- #
 # Rewrite caches: Haiku always; Gemini only if its CEAS cache file exists
-# --------------------------------------------------------------------------- #
 def _gemini_ceas_path():
     slug = re.sub(r"[^a-zA-Z0-9]+", "-", td.GEMINI_REWRITES.stem.replace("rewrites_", "")).strip(
         "-"
@@ -107,9 +100,7 @@ def _by_id(recs: list[dict]) -> dict:
     return by_id
 
 
-# --------------------------------------------------------------------------- #
 # Scoring — predict_proba mirroring ev._score_block, transformer-style rows
-# --------------------------------------------------------------------------- #
 def _maybe_mask(texts, masked: bool):
     return [ablation.mask_urls(t) for t in texts] if masked else list(texts)
 
@@ -189,7 +180,7 @@ def score() -> None:
     config.ensure_dirs()
     df = ev.build_dataset()
 
-    # ---- assemble rewrite caches (Haiku always; Gemini only if present) ----
+    # assemble rewrite caches (Haiku always; Gemini only if present)
     haiku = _by_id(list(ev._load_cache().values()))
     if not haiku:
         raise SystemExit(
@@ -258,10 +249,8 @@ def _print_summary(out: pd.DataFrame, mcn: pd.DataFrame) -> None:
             )
 
 
-# --------------------------------------------------------------------------- #
 # Run report — write a standalone verdict file under logs/ (run-state, gitignored).
 # RESULTS.md is maintained by hand and is not written here.
-# --------------------------------------------------------------------------- #
 ROBUST_EPS = 0.03  # |sev0->sev1 recall drop| below this == "robust" (matches primary)
 
 

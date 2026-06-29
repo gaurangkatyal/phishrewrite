@@ -34,9 +34,7 @@ ARCHIVE_STEM: str = f"phishrewrite-benchmark-v{VERSION}"
 DEFANGED_URL_RE = re.compile(r"hxxps?://\S+|www\[\.\]\S+", re.IGNORECASE)
 
 
-# --------------------------------------------------------------------------- #
 # Lossless scheme-only defang / refang
-# --------------------------------------------------------------------------- #
 def _defang_token(u: str) -> str:
     u = re.sub(r"^https://", "hxxps://", u, flags=re.IGNORECASE)
     u = re.sub(r"^http://", "hxxp://", u, flags=re.IGNORECASE)
@@ -63,9 +61,7 @@ def refang(text: str) -> str:
     return DEFANGED_URL_RE.sub(lambda m: _refang_token(m.group(0)), text or "")
 
 
-# --------------------------------------------------------------------------- #
 # Build
-# --------------------------------------------------------------------------- #
 def _build_emails() -> pd.DataFrame:
     """Defanged labeled email table (verbatim text columns -> defanged)."""
     df = pd.read_csv(config.DATASET_CSV)
